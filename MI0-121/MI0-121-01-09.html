@@ -108,6 +108,7 @@
         var swiper = new Swiper('.swiper-content-area', {
             slidesPerView: 1,
             spaceBetween: 0,
+            speed:0,
             autoHeight: true,
             pagination: {
                 el: '.swiper-pagination',
@@ -119,6 +120,14 @@
             },
             loop: false,
             autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
         });
     };
 </script>

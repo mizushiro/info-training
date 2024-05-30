@@ -79,6 +79,9 @@ a, button{color:blue}
 .swiper-nav-group .swiper-button-next,
 .swiper-nav-group .swiper-button-prev {height:3.2rem;width:7.6rem;display:flex;align-items:center;justify-content:center;background-color:#fff;border-radius:999em;font-size:1.6rem;color:#6A6D73;font-weight:700;line-height:1;}
 .swiper-content-area {flex:1;overflow-x:hidden;overflow-y:scroll;}
+.swiper-content-area .swiper-wrapper {height:100%}
+.swiper-content-area .swiper-slide {height:0;overflow:hidden}
+.swiper-content-area .swiper-slide.swiper-slide-active {height:auto}
 /*.swiper-slide > :last-child {padding-bottom:2.4rem;}*/
 .training-img-box {margin-top:1.2rem;}
 .training-img-box img {max-width:100%;display:block;}
