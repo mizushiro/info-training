@@ -2,7 +2,7 @@
 
 /* default */
 html {font-size:10px}
-html, body{width:100%;height:100%;word-break:keep-all;text-align:justify;}
+html, body{width:100%;height:100%;word-break:keep-all;}
 body{font-family:'SUIT', 'Malgun Gothic', AppleGothicNeoSD, 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic', 'Droid sans', Dotum, 돋움, 굴림, arial, sans-serif;font-size:1.3rem;line-height:1.5;letter-spacing:-0.03em;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;-moz-osx-font-smoothing:grayscale;overflow-y:auto;-webkit-overflow-scrolling:touch;overflow-x:hidden;}
 body:before{content:'';position:fixed;left:0;top:0;width:100%;height:0;}/* fix webkit bug(scroll event delay) */
 body, div, h1, h2, h3, h4, h5, h6, form, fieldset, p, button, iframe, tr, tbody, thead, table, th, td, b, span, strong, label{margin:0;padding:0;box-sizing:border-box;}
@@ -79,4 +79,12 @@ a, button{color:blue}
 .swiper-nav-group .swiper-button-next,
 .swiper-nav-group .swiper-button-prev {height:3.2rem;width:7.6rem;display:flex;align-items:center;justify-content:center;background-color:#fff;border-radius:999em;font-size:1.6rem;color:#6A6D73;font-weight:700;line-height:1;}
 .swiper-content-area {flex:1;overflow-x:hidden;overflow-y:scroll;}
-.swiper-slide > :last-child {padding-bottom:2.4rem;}
+/*.swiper-slide > :last-child {padding-bottom:2.4rem;}*/
+.training-img-box {margin-top:1.2rem;}
+.training-img-box img {max-width:100%;display:block;}
+.training-table-basic {width:100%;border-top:.1rem solid #000;}
+.training-table-basic caption {font-size:2rem;font-weight:600;color:#000;margin-bottom:.8rem;opacity:1;height:auto;text-align:left;}
+.training-table-basic thead th {background-color:#F9F9FA;padding:.8rem;height:4rem;text-align:center;color:#000;font-weight:400;font-size:2rem;border-bottom:.1rem solid #E1E1E1;}
+.training-table-basic thead th:not(:last-child) {border-right:.1rem solid #E1E1E1}
+.training-table-basic tbody td {padding:.8rem;text-align:center;height:4rem;color:#000;font-weight:400;font-size:2rem;border-bottom:.1rem solid #E1E1E1;}
+.training-table-basic tbody td:not(:last-child) {border-right:.1rem solid #E1E1E1}
