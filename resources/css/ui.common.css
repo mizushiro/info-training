@@ -30,11 +30,17 @@ a, button{color:blue}
     --training-primary:#12BABA;
 }
 
+::-webkit-scrollbar {height:1.2rem;width:1.2rem;}
+::-webkit-scrollbar-track {border-radius:999em;}
+::-webkit-scrollbar-thumb {width:.4rem;border-radius:999em;border:.4rem solid transparent;background-color:rgba(0,0,0,.15);background-clip:padding-box;}
+
 .mt-12 {margin-top:1.2rem;}
 .mt-20 {margin-top:2rem;}
 .mt-40 {margin-top:4rem;}
+.p-scroll {padding:2.4rem 1.2rem 2.4rem 2.4rem;}
 
-.training-base {padding:2.4rem;}
+.training-base {display:flex;flex-direction:column;height:100%;}
+.training-head {padding:2.4rem 2.4rem 1.6rem;flex-shrink:0;}
 .title-box {background-color:var(--training-primary);padding:0 1.2rem;height:4rem;border-radius:.8rem;font-size:2.4rem;line-height:1;display:inline-flex;align-items:center;color:#fff;font-weight:800;margin-bottom:1.6rem;}
 .title-30 {font-size:3rem;line-height:3.6rem;color:#000;}
 .text-24-700 {font-size:2.4rem;line-height:3.6rem;font-weight:700;color:#000;}
@@ -43,13 +49,34 @@ a, button{color:blue}
 .dot-type-20-400 {font-weight:400;}
 .dot-type-20-600 {font-weight:600;}
 .text-20-600 {font-size:2rem;line-height:2.8rem;color:#252524;font-weight:600;}
-.training-content {margin-top:4rem;}
+.training-content {flex:1;display:flex;flex-direction:column;overflow:hidden;}
 .line-box {border:1px solid var(--training-primary);position:relative;border-radius:.8rem;padding:2rem;}
+[data-type="flex"] {display:flex}
+[data-j-align="end"] {justify-content:flex-end}
 .round-box {border-radius:999em;background-color:var(--training-primary);display:inline-flex;align-items:center;height:2.8rem;color:#fff;gap:.6rem;font-size:1.8rem;padding:0 1.2rem;line-height:1;}
 .round-box .icon-round-box-20 {margin-left:-.8rem;}
 .line-box .round-box {position:absolute;left:2rem;top:-1.4rem;}
 .icon-round-box-20 {width:2rem;height:2rem;border-radius:999em;background-color:#fff;display:flex;align-items:center;justify-content:center;}
 .icon-01 {display:block;background:url("../images/icon-01.svg") no-repeat 50% 50%;background-size:contain;aspect-ratio:1/1;width:1.6rem;}
 .entry-img {aspect-ratio:80/158;background:url("../images/robot.png") no-repeat 50% 50%;background-size:contain;width:4rem;position:relative;margin-top:4rem}
-.balloon-box {aspect-ratio:48/31;background:url("../images/balloon.svg") no-repeat 50% 50%;width:4.8rem;display:inline-flex;justify-content:center;color:#fff;font-size:1.6rem;font-weight:600;align-items:flex-start;line-height:2.2rem;}
+.balloon-box {width:4.8rem;position:relative;display:inline-flex;justify-content:center;color:#fff;font-size:1.6rem;font-weight:600;align-items:flex-start;line-height:2.2rem;}
+.balloon-box-bg {aspect-ratio:48/31;background:url("../images/balloon.svg") no-repeat 50% 50%;width:100%;display:block;position:absolute;top:0;left:0;}
+.balloon-box-data {position:relative;}
 .entry-img .balloon-box {position:absolute;top:-1.8rem;right:-4rem;}
+[data-j-align="end"] .entry-img .balloon-box {right:auto;left:-4.4rem;}
+[data-j-align="end"] .entry-img .balloon-box-bg {transform:scaleX(-1);}
+.swiper-nav-group {display:flex;align-items:center;justify-content:center;gap:1.6rem;background-color:var(--training-primary);padding:1.2rem 0;flex-shrink:0;}
+.swiper-nav-group .swiper-button-next,
+.swiper-nav-group .swiper-button-prev,
+.swiper-nav-group .swiper-pagination {position:static;margin:0}
+.swiper-nav-group .swiper-pagination {width:auto;display:flex;font-size:1.6rem;color:rgba(255,255,255,.3);align-items:center;font-weight:700;gap:.8rem;}
+.swiper-nav-group .swiper-pagination-current,
+.swiper-nav-group .swiper-pagination-total {border-radius:999em;width:3.2rem;height:3.2rem;display:flex;align-items:center;justify-content:center;line-height:1;}
+.swiper-nav-group .swiper-pagination-current {background-color:#FFF0CC;color:#000;}
+.swiper-nav-group .swiper-pagination-total {background-color:#fff;color:#6A6D73}
+.swiper-nav-group .swiper-button-next:after,
+.swiper-nav-group .swiper-button-prev:after {display:none}
+.swiper-nav-group .swiper-button-next,
+.swiper-nav-group .swiper-button-prev {height:3.2rem;width:7.6rem;display:flex;align-items:center;justify-content:center;background-color:#fff;border-radius:999em;font-size:1.6rem;color:#6A6D73;font-weight:700;line-height:1;}
+.swiper-content-area {flex:1;overflow-x:hidden;overflow-y:scroll;}
+.swiper-slide > :last-child {padding-bottom:2.4rem;}
