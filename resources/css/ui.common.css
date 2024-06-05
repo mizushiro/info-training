@@ -38,17 +38,22 @@ a, button{color:blue}
 .mt-20 {margin-top:2rem;}
 .mt-40 {margin-top:4rem;}
 .p-scroll {padding:2.4rem 1.2rem 2.4rem 2.4rem;}
+.sr-only {position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
+.icon-play {aspect-ratio:1/1;width:2rem;background:url("../images/icon-play.svg") no-repeat 50% 50%;background-size:contain;display:inline-block;}
 
 .training-base {display:flex;flex-direction:column;height:100%;}
 .training-head {padding:2.4rem 2.4rem 1.6rem;flex-shrink:0;}
 .title-box {background-color:var(--training-primary);padding:0 1.2rem;height:4rem;border-radius:.8rem;font-size:2.4rem;line-height:1;display:inline-flex;align-items:center;color:#fff;font-weight:800;margin-bottom:1.6rem;}
 .title-30 {font-size:3rem;line-height:3.6rem;color:#000;}
+.title-24 {font-size:2.4rem;line-height:3.2rem;color:#000;font-weight:500;}
+.indent-01 {text-indent:2rem;}
 .text-24-700 {font-size:2.4rem;line-height:3.6rem;font-weight:700;color:#000;}
 [class^="dot-type-20-"] {font-size:2rem;line-height:3.2rem;position:relative;padding-left:1.2rem;color:#232426;}
 [class^="dot-type-20-"]::before {content:'';position:absolute;left:0;width:.4rem;height:.4rem;border-radius:999em;background-color:#232426;top:1.4rem;}
 .dot-type-20-400 {font-weight:400;}
 .dot-type-20-600 {font-weight:600;}
 .text-20-600 {font-size:2rem;line-height:2.8rem;color:#252524;font-weight:600;}
+.text-20-800 {font-size:2rem;line-height:2.8rem;color:#000;font-weight:800;display:flex;gap:.8rem;align-items:center}
 .training-content {flex:1;display:flex;flex-direction:column;overflow:hidden;}
 .line-box {border:1px solid var(--training-primary);position:relative;border-radius:.8rem;padding:2rem;}
 [data-type="flex"] {display:flex}
@@ -58,7 +63,9 @@ a, button{color:blue}
 .line-box .round-box {position:absolute;left:2rem;top:-1.4rem;}
 .icon-round-box-20 {width:2rem;height:2rem;border-radius:999em;background-color:#fff;display:flex;align-items:center;justify-content:center;}
 .icon-01 {display:block;background:url("../images/icon-01.svg") no-repeat 50% 50%;background-size:contain;aspect-ratio:1/1;width:1.6rem;}
+.icon-02 {display:block;background:url("../images/icon-02.svg") no-repeat 50% 50%;background-size:contain;aspect-ratio:1/1;width:1.6rem;}
 .entry-img {aspect-ratio:80/158;background:url("../images/robot.png") no-repeat 50% 50%;background-size:contain;width:4rem;position:relative;margin-top:4rem}
+.entry-img[data-img="obz-02"] {aspect-ratio:188/93;background-image:url("../images/obz-02.png");width:8rem}
 .balloon-box {width:4.8rem;position:relative;display:inline-flex;justify-content:center;color:#fff;font-size:1.6rem;font-weight:600;align-items:flex-start;line-height:2.2rem;}
 .balloon-box-bg {aspect-ratio:48/31;background:url("../images/balloon.svg") no-repeat 50% 50%;width:100%;display:block;position:absolute;top:0;left:0;}
 .balloon-box-data {position:relative;}
@@ -91,3 +98,5 @@ a, button{color:blue}
 .training-table-basic thead th:not(:last-child) {border-right:.1rem solid #E1E1E1}
 .training-table-basic tbody td {padding:.8rem;text-align:center;height:4rem;color:#000;font-weight:400;font-size:2rem;border-bottom:.1rem solid #E1E1E1;}
 .training-table-basic tbody td:not(:last-child) {border-right:.1rem solid #E1E1E1}
+.img-layout {display:flex;flex-direction:column;gap:.8rem;align-items:flex-start;}
+.img-layout img {max-width:100%;}

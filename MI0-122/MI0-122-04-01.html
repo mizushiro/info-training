@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-30">소리 센서와 LED를 사용한 예제</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700">
+                    1. 소리의 크기에 따라 나팔의 크기가 달라지도록 프로그램을 작성해 보자.
+                </p>
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-01"></i>
+                        </span>
+                        조건
+                    </p>
+                    <p class="dot-type-20-400">소리 센서(아날로그 0)를 선택한다.</p>
+                    <p class="dot-type-20-400">조건: 나팔 크기는 초깃값 100으로 설정하고, 센서의 값이 20 이상이면 크기가 5씩 커지도록 한다.</p>
+                </div>
+                <p class="text-20-800 mt-40">
+                    <i class="icon-play"></i>실행화면
+                </p>
+                <div class="line-box mt-12" data-type="flex">
+                    <div class="entry-img" data-img="obz-02">
+                        <p class="sr-only">나팔 오브젝트가 소리 센서의 값인 4를 말하고 있는 실행 화면 그림</p>
+                        <span class="balloon-box">
+                            <span class="balloon-box-bg"></span>
+                            <span class="balloon-box-data">4</span>
+                        </span>
+                    </div>
+                </div>
+                <p class="dot-type-20-600 mt-12">오브젝트 : 나팔</p>
+                <p class="text-20-600 mt-40">
+                    아래 블록을 참고하여 프로그램을 작성해 보자.
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-122-04-01/MI0-122-04-01_02.png" alt="나팔 크기의 초깃값을 100으로 설정한 후, 소리 센서의 값이 20 이상이면 나팔 오브젝트의 크기가 5씩 커지는 과정을 반복하는 엔트리 블록 그림">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

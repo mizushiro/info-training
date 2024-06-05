@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">(3) 스마트 교실 만들기</h1>
+        <h2 class="title-24 indent-01">교실에서 학생들의 말소리가 들린다면 소리 센서의 측정값이 상승하게 된다. 이를 활용하여 LED가 자동으로 켜지고 꺼질 수 있도록 프로그램을 작성해 보자.</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <div class="line-box">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-02"></i>
+                        </span>
+                        동작 원리
+                    </p>
+                    <p class="dot-type-20-400">소리 센서의 값이 일정 크기(30) 이상이면 학생들이 교실에 있다고 판단하여 LED가 켜진다.</p>
+                    <p class="dot-type-20-400">소리 센서의 값이 0에 가까우면 학생들이 교실에 없다고 판단하여 LED가 꺼진다.</p>
+                </div>
+
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-02"></i>
+                        </span>
+                        화면 구성하기
+                    </p>
+                    <div class="line-box mt-12" data-type="flex">
+                        <div class="entry-img">
+                            <p class="sr-only">엔트리봇이 소리 센서의 값인 5를 말하고 있는 실행 화면 그림</p>
+                            <span class="balloon-box">
+                                <span class="balloon-box-bg"></span>
+                                <span class="balloon-box-data">5</span>
+                            </span>
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="dot-type-20-600 mt-12">오브젝트 : 엔트리봇</p>
+                </div>
+
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-02"></i>
+                        </span>
+                        프로그래밍하기
+                    </p>
+                    <div class="img-layout mt-12">
+                        <img src="./images/MI0-122-04-03/MI0-122-04-03_02.png" alt="엔트리봇 오브젝트 그림">
+                        <p class="text-20-600">엔트리봇</p>
+                    </div>
+                    <p class="text-20-600 mt-20">
+                        (1) 시작 버튼을 클릭하면 현재 측정되는 소리 센서의 값을 말한다.<br>
+                        (2) (3)~(5)의 과정을 반복한다.<br>
+                        (3) 소리 센서의 값이 30 이상이면 노랑 LED가 켜진다.<br>
+                        (4) 소리 센서의 값이 30보다 작으면 노랑 LED가 꺼진다.<br>
+                        (5) 2초 기다린다.
+                    </p>
+
+                    <div class="img-layout mt-20">
+                        <p class="dot-type-20-600">소리 센서의 값이 30 이상이면 LED가 켜짐.</p>
+                        <img src="./images/MI0-122-04-03/MI0-122-04-03_03.png" alt="엔트리봇 오브젝트 그림">
+                        <p class="dot-type-20-600 mt-20">소리 센서의 값이 30 미만이면 LED가 꺼짐.</p>
+                        <img src="./images/MI0-122-04-03/MI0-122-04-03_04.png" alt="엔트리봇 오브젝트 그림">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
