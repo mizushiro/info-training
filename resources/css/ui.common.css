@@ -122,3 +122,5 @@ strong.primary-color {font-weight:800;}
 .sky-title-box:after {right:1.2rem;}
 .ability-box {display:inline-flex;border:.2rem solid var(--training-primary);align-items:center;padding:0 .8rem;height:3.2rem;gap:.4rem;border-radius:999em;font-size:1.8rem;color:var(--training-primary);font-weight:700;}
 .ability-box .icon-round-box-24 {margin-right:-.5rem;}
+.number-flex {display:flex;align-items:flex-start;gap:.4rem;}
+.number-flex .number-text {flex-shrink:0;width:2.6rem;}
