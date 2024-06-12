@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 굳히기 활동</h1>
+        <h2 class="title-24">별무늬 만들기</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700">
+                    물감에 닿거나 키보드에서 ‘r’(빨강), ‘y’(노랑), ‘b’(파랑)을 누르면 지정 색의 별을 화면에 찍어 주는 별무늬 만들기 프로그램을 작성해 보자.
+                </p>
+
+                <p class="text-20-800 mt-40">
+                    <i class="icon-play"></i>실행화면
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-322-04-03/MI0-322-04-03_01.png" alt="별무늬 만들기라는 제목 아래 빨간색 물감, 노란색 물감, 파란색 물감이 있고, 속이 빈 사각형 안에 빨간색 별, 노란색 별, 파란색 별, 초록색 별이 뒤섞여 있는 실행 화면 그림">
+                </div>
+
+                <dl class="line-box-v2 mt-40">
+                    <dt class="line-box-title">오브젝트</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">속이 빈 사각형</p>
+                        <p class="dot-type-20-400">[묶음] 별</p>
+                        <p class="dot-type-20-400">물감(빨강/노랑/파랑)</p>
+                        <p class="dot-type-20-400">별무늬 만들기(글상자)</p>
+                    </dd>
+                    <dt class="line-box-title">신호</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">그리기</p>
+                    </dd>
+                </dl>
+
+                <div class="flex-col">
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-322-04-03/MI0-322-04-03_02.png" alt="별 오브젝트 그림">
+                    </div>
+                    <p class="text-20-600">[묶음] 별</p>
+                    <div class="bubble-box" data-position="relative">
+                        <p class="dot-type-20-400">물감 오브젝트에 닿거나 ‘r’, ‘y’, ‘b’를 누르면 해당 색의 별 모양으로 바꾼다.</p>
+                        <p class="dot-type-20-400">‘a’와 ‘s’ 키를 같이 누르면 ‘별_초록’ 모양으로 바뀐다.</p>
+                        <p class="dot-type-20-400">그리기 신호를 받고 마우스를 클릭하면 마우스 포인터 위치에 지정된 별 모양을 찍는다.</p>
+                    </div>
+                </div>
+
+                <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-322-04-03/MI0-322-04-03_03.png" alt="빨강, 노랑, 파랑이라고 이름 붙여진 물감 오브젝트에 닿거나 키보드에서 r, y, b키를 누르면 각각의 색깔에 맞는 별로 변경하고, a, s키를 누르면 초록색 별로 변경하는 과정을 반복하는 엔트리 블록 그림">
+                </div>
+
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-322-04-03/MI0-322-04-03_04.png" alt="마우스를 클릭하면 해당 모양의 별을 찍어 주는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+                <div class="gray-ling-box mt-20">
+                    <div class="gray-title-box">
+                        <div class="icon-round-box-36">
+                            <i class="icon-tip"></i>
+                        </div>
+                        <span class="mini-title">Tip</span>
+                    </div>
+                    <div class="gray-ling-box-content">
+                        <p class="text-20-600">[묶음] 별 오브젝트의 모양 이름을 [모양] 탭에서 다음과 같이 바꾼다.</p>
+                        <div class="img-layout mt-12">
+                            <img src="./images/MI0-322-04-03/MI0-322-04-03_05.png" alt="별_1은 별_노랑으로, 별_2는 별_빨강으로, 별3_은 별_파랑으로, 별_5는 별_초록으로 이름을 바꾸는 과정을 나타낸 사진">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
