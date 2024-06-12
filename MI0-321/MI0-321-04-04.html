@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">(2) 데이터의 순차적 저장</h1></header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-20-600">
+                    <strong class="primary-color">리스트의 데이터 수정 |</strong> 리스트의 첫 번째 항목을 5로 수정해 보자. 첫 번째 항목의 값만 5로 바뀌고 나머지 항목에는 변화가 없다.
+                </p>
+
+                <p class="dot-type-20-400 mt-40">아래 화면과 블록을 참고하여 리스트의 데이터를 수정해 보자.</p>
+
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-321-04-04/MMI0-321-04-04_01.png" alt="숫자 리스트의 첫 번째 항목이 10에서 5로 바뀐 엔트리 화면 사진">
+                </div>
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-321-04-04/MMI0-321-04-04_02.png" alt="시작하기 버튼을 클릭했을 때 숫자  리스트의 첫 번째 항목을 5로 수정하는 과정이 담긴 엔리 블록">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
