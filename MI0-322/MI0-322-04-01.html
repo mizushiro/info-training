@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-24">두 수의 크기 비교하기</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700">
+                    두 개의 양수를 입력받아 두 수의 크기를 비교해 주는 프로그램을 작성해 보자.
+                </p>
+
+                <div class="training-img-box mt-40">
+                    <img src="./images/MI0-322-04-01/MMI0-322-04-01_01.png" alt="교실을 배경으로 어린이 오브젝트가 서 있고, 칠판에는 첫 번째 수와 두 번째 수가 제시되어 있는 실행 화면 그림">
+                </div>
+
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        오브젝트
+                    </p>
+                    <p class="dot-type-20-400">어린이(1)</p>
+                    <p class="dot-type-20-400">글상자</p>
+                    <p class="dot-type-20-400">교실(2)</p>
+                </div>
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        신호
+                    </p>
+                    <p class="dot-type-20-400">첫 번째 수</p>
+                    <p class="dot-type-20-400">두 번째 수</p>
+                </div>
+
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-02"></i>
+                        </span>
+                        알고리즘
+                    </p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(1)</span>프로그램이 시작되면 “숫자 두 개를 입력하세요.”라고 말하고, 두 개의 숫자를 입력받는다.</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(2)</span>두 개의 숫자 중 하나라도 양수가 아니면 “양수를 입력하세요.”를 말한다.</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(3)</span>그렇지 않으면 비교 결과를 말한다.</p>
+                </div>
+
+                <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-322-04-01/MMI0-322-04-01_02.png" alt="어린이 오브젝트 그림">
+                </div>
+                <p class="text-20-600 mt-12">어린이(1)</p>
+
+                <div class="training-img-box mt-40">
+                    <img src="./images/MI0-322-04-01/MMI0-322-04-01_03.png" alt="두 개의 숫자를 입력받아 양수인지 확인한 후, 크기를 비교하여 첫 번째 숫자가 크면 “첫 번째 수가 큽니다.”, 같으면 “두 수는 같습니다.”, 두 번째 숫자가 크면 “두 번째 수가 큽니다.”라고 말하는 과정이 담긴 엔트리 블록 그림">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
