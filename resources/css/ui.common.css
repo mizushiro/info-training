@@ -120,5 +120,5 @@ strong.primary-color {font-weight:800;}
 .sky-title-box:after {content:'';position:absolute;top:50%;background-color:#12BABA;width:.4rem;height:.4rem;border-radius:50%;display:block;margin-top:-.2rem;}
 .sky-title-box:before {left:1.2rem;}
 .sky-title-box:after {right:1.2rem;}
-.ability-box {display:inline-flex;border:.2rem solid var(--training-primary);align-items:center;padding:0 .8rem;height:3.2rem;gap:.4rem;border-radius:999em;font-size:1.8rem;color:var(--training-primary);vertical-align:middle;position:relative;top:-.1rem;font-weight:700;}
+.ability-box {display:inline-flex;border:.2rem solid var(--training-primary);align-items:center;padding:0 .8rem;height:3.2rem;gap:.4rem;border-radius:999em;font-size:1.8rem;color:var(--training-primary);font-weight:700;}
 .ability-box .icon-round-box-24 {margin-right:-.5rem;}
