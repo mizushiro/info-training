@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex">
+            (3) 디버깅
+        </h1>
+        <h2 class="title-24 indent-01">
+            디버깅은 프로그램 개발 단계 중에 발생하는 논리적인 오류나 비정상적인 연산 등을 찾아내어 그 원인을 밝히고 수정하는 과정을 뜻한다. 다음 프로그램에서 오류를 찾아 수정해 보자.
+        </h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <p class="text-20-600">
+                        다음 실행 화면을 참고하여 우유 급식 확인 프로그램을 작성하고 디버깅해 보자.
+                    </p>
+
+                    <p class="text-20-800 mt-40">
+                        <i class="icon-play"></i>실행화면
+                    </p>
+                    <div class="training-img-box" data-align="col">
+                        <div class="flex-group">
+                            <div class="flex-col">
+                                <img src="./images/MI0-324-04-06/MI0-324-04-06_01.png" alt="가로 10칸, 세로 3칸 만큼 원이 그려져 있는 우유 급식 확인판 중앙에 우유 오브젝트 하나가 나타나 있는 초기 화면 그림">
+                                <p class="text-20-600">▲ 초기 화면</p>
+                            </div>
+                            <div class="flex-col">
+                                <img src="./images/MI0-324-04-06/MI0-324-04-06_02.png" alt="우유 급식 확인판에 가로 10칸, 세로 3칸 만큼 우유 오브젝트가 채워지고, 가장 끝에 추가적으로 제시된 우유 오브젝트 하나가 화면 밖으로 튀어나온 실행 완료 화면 그림">
+                                <p class="text-20-600">▲ 실행 완료 화면</p>
+                            </div>
+                        </div>
+                        <div class="flex-group mt-20">
+                            <div class="flex-col">
+                                <img src="./images/MI0-324-04-06/MI0-324-04-06_03.png" alt="디버깅이라는 글자가 적혀 있는 아래 화살표 그림" style="width:10rem">
+                                <img src="./images/MI0-324-04-06/MI0-324-04-06_04.png" alt="디버깅 후 화면 밖으로 우유 오브젝트가 튀어나왔던 오류가 수정되어, 우유 급식 확인판에 가로 10칸, 세로 3칸 만큼만 우유 오브젝트가 채워진 목표 화면 그림">
+                                <p class="text-20-600">▲ 목표 화면</p>
+                                <img src="./images/MI0-324-04-06/MI0-324-04-06_05.png" alt="인공지능을 형상화한 캐릭터가 “디버깅? 디버거에게 도와달라고 해!”라고 말하고 있는 그림" class="mt-40">
+                                <img src="./images/MI0-324-04-06/MI0-324-04-06_06.png" alt="디버깅 후 화면 밖으로 우유 오브젝트가 튀어나왔던 오류가 수정되어, 우유 급식 확인판에 가로 10칸, 세로 3칸 만큼만 우유 오브젝트가 채워진 목표 화면 그림">
+                                <p class="text-20-600">우유 200ml</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <dl class="line-box-v2 mt-40">
+                        <dt class="line-box-title">오브젝트</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">우유 급식 확인판</p>
+                            <p class="dot-type-20-400">우유 200ml</p>
+                        </dd>
+                    </dl>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성하고, 디버깅해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="relative">
+                            <img src="./images/MI0-324-04-06/MI0-324-04-06_07.png" alt="우유 오브젝트를 클릭했을 때 x: -202, y: 53 위치로 이동하고 크기를 20으로 조정한 다음, x 좌표를 45씩 이동하며 10개의 도장을 찍고 x 좌표는 다시 -203으로, y 좌표는 우유 오브젝트의 y 좌푯값에서 60만큼 뺀 값으로 이동하는 과정을 3번 반복하는 기존 프로그램의 엔트리 블록 그림" style="width:47rem" />
+                            <div class="bubble-box right-10" data-position="bottom-20">
+                                다음 줄로 내려간<br>
+                                우유 오브젝트가 보이는<br>
+                                거였어. 모양 숨기기와<br>
+                                모양 보이기 블록을<br>
+                                사용하여 오류를<br>
+                                수정할 수 있어.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

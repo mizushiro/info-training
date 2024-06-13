@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex">(1) 함수</h1>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <h2 class="title-24">
+                        <strong class="primary-color">함수 활용하기 |</strong> 함수는 여러 가지 형태로 다양하게 응용할 수 있다. ‘편지봉투‘ 함수를 활용해 크기가 10씩 작아지는 편지봉투 프로그램을 작성해 보자.
+                    </h2>
+                    <p class="text-20-600 mt-20">
+                        다음 실행 화면을 참고하여 크기가 10씩 작아지는 편지봉투 프로그램을 완성해 보자.
+                    </p>
+
+                    <p class="text-20-800 mt-40">
+                        <i class="icon-play"></i>실행화면
+                    </p>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-324-04-02/MI0-324-04-02_01.png" alt="칠판 배경에 연필 오브젝트를 활용하여 크기가 10씩 작아지는 노란색 편지봉투 5개를 그린 샐행 화면 그림">
+                    </div>
+
+                    <dl class="line-box-v2 mt-40">
+                        <dt class="line-box-title">오브젝트</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">연필(1)</p>
+                            <p class="dot-type-20-400">칠판(2)</p>
+                        </dd>
+                        <dt class="line-box-title">변수</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">편지봉투 크기</p>
+                        </dd>
+                        <dt class="line-box-title">함수</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">편지봉투</p>
+                        </dd>
+                    </dl>
+
+                    <div class="sky-title-box mt-40">
+                        '편지봉투‘ 함수 응용하기
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-324-04-02/MI0-324-04-02_02.png" alt="편지봉투 함수에서 함수값 블록을 추가하고 수정하는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                    
+                    <div class="mt-20">
+                        <p class="text-20-600 number-flex">
+                            <span class="number-text">(1)</span>
+                            <span>
+                                '편지봉투‘ 함수에
+                                <img src="./images/MI0-324-04-02/MI0-324-04-02_03.png" alt="문자/숫자값이라고 적혀 있는 함숫값 블록 그림" />을 추가한다.
+                            </span>
+                        </p>
+                        <p class="text-20-600 number-flex"><span class="number-text">(2)</span>‘편지봉투‘ 함수의 달라진 부분을 확인한다.</p>
+                        <p class="text-20-600 number-flex">
+                            <span class="number-text">(3)</span>
+                            <span>
+                                움직이는 크기를 전달받을
+                                <img src="./images/MI0-324-04-02/MI0-324-04-02_04.png" alt="문자/숫자값1이라고 적혀 있는 함숫값 블록 그림" />
+                                블록을 드래그하여 넣는다.
+                            </span>
+                        </p>
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-324-04-02/MI0-324-04-02_05.png" alt="연필 오브젝트 그림">
+                            <p class="text-20-600">연필(1)</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-324-04-02/MI0-324-04-02_06.png" alt="붓의 색은 노란색으로,연필 오브젝트의 위치는 x: -150, y: 80으로 지정한 후, 편지봉투 크기 값을 전달한 편지봉투 함수를 사용하고 편지 봉투의 간격을 10씩 이동시키며 편지봉투 크기를 10만큼 작게 만드는 과정을 5번 반복하는 엔트리 블록 그림">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

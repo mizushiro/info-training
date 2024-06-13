@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-24">집 모양 함수 만들기</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700">
+                    ‘편지봉투’ 함수를 수정하여 집 모양을 그리는 함수로 만들어 보자.
+                </p>
+
+                <p class="text-20-800 mt-40">
+                    <i class="icon-play"></i>실행화면
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-324-04-03/MI0-324-04-03_01.png" alt="연필 오브젝트를 활용하여 삼각형과 사각형으로 이루어진 집 모양을 그리는 프로그램의 실행 화면 그림">
+                </div>
+                <div class="mt-20">
+                    <p class="text-20-600 number-flex"><span class="number-text">(1)</span>함수 이름을 ‘집’으로 수정한다.</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(2)</span>함수 안에 삼각형 그리는 부분의 각도를 수정한다.</p>
+                </div>
+
+                <div class="training-img-box">
+                    <img src="./images/MI0-324-04-03/MI0-324-04-03_02.png" alt="이동 방향으로 50만큼 움직이고 이동 방향을 -120도 만큼 회전한 후 0.5초 기다리는 과정을 3번 반복하는 엔트리 블록 그림">
+                </div>
+
+                <div class="mt-20">
+                    <p class="text-20-600 number-flex"><span class="number-text">(3)</span>실행하여 결과를 확인한다.</p>
+                </div>
+
+                <div class="training-img-box">
+                    <img src="./images/MI0-324-04-03/MI0-324-04-03_03.png" alt="집이라는 이름의 함수가 실행되는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

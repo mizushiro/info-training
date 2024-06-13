@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex">
+            <span class="number-text">(2)</span> 와이파이 신호 세기 프로그램 만들기
+        </h1>
+        <h2 class="title-24 indent-01">
+            와이파이 신호 세기에 따라 결과가 달라지는 프로그램을 작성하기 위해서는 반환값을 사용해야 한다. 함수의 사용이 완료되었을 때의 결괏값을 반환값이라고 한다. 반환값은 함수에 따라 있을 수도 있고 없을 수도 있다.
+        </h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <p class="text-20-600">
+                        다음 실행 화면을 참고하여 와이파이 신호 세기 프로그램을 완성해 보자.
+                    </p>
+
+                    <p class="text-20-800 mt-40">
+                        <i class="icon-play"></i>실행화면
+                    </p>
+                    <div class="training-img-box">
+                        <div class="flex-col">
+                            <img src="./images/MI0-324-04-05/MI0-324-04-05_01.png" alt="종이 접기 프레임 배경에 신호 크기, 대답, 와이파이 신호가 좋다는 것을 표시하는 모양, 신호 크기 안내 글상자 등이 각각 제시되어 있는 실행 화면 그림">
+                            <p class="text-20-600">▲ 반환값이 “좋음”일 때</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box">
+                        <div class="flex-col">
+                            <img src="./images/MI0-324-04-05/MI0-324-04-05_02.png" alt="종이 접기 프레임 배경에 신호 크기, 대답, 와이파이 신호가 나쁘다는 것을 표시하는 모양, 신호 크기 안내 글상자 등이 각각 제시되어 있는 실행 화면 그림">
+                            <p class="text-20-600">▲ 반환값이 “나쁨”일 때</p>
+                        </div>
+                    </div>
+
+                    <dl class="line-box-v2 mt-40">
+                        <dt class="line-box-title">오브젝트</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">와이파이</p>
+                            <p class="dot-type-20-400">종이 접기 프레임</p>
+                            <p class="dot-type-20-400">신호 크기 안내(글상자)</p>
+                        </dd>
+                        <dt class="line-box-title">변수</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400"> 신호 크기</p>
+                        </dd>
+                        <dt class="line-box-title">함수</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400"> 신호 크기</p>
+                        </dd>
+                    </dl>
+
+                    <div class="sky-title-box mt-40">
+                        '신호 크기‘ 함수 만들기
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-324-04-05/MI0-324-04-05_03.png" alt="신호 크기 함수 오브젝트 그림">
+                            <p class="text-20-600">신호 크기 함수</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-324-04-05/MI0-324-04-05_04.png" alt="대답이 10보다 크면 신호 크기를 좋음으로 정하고 그렇지 않다면 나쁨으로 정하는 신호 크기 함수 블록 그림">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        와이파이 신호 세기 프로그램 만들기
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-324-04-05/MI0-324-04-05_05.png" alt="와이파이 오브젝트 그림">
+                            <p class="text-20-600">와이파이</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-324-04-05/MI0-324-04-05_06.png" alt="신호 입력을 안내한 후, 신호 크기 함수를 호출하여 반환값이 좋음이면 와이파이_1 모양으로 바꾸고, 반환값이 나쁨이면 와이파이_3 모양으로 바꾼 다음 신호를 다시 입력받는 과정을 반복하는 엔트리 블록 그림">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-24">반복문으로 프로그램 수정하기</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700">
+                    순차 구조로 작성된 프로그램을 반복문으로 수정해 보자.
+                </p>
+
+                <div class="mt-20">
+                    <p class="text-20-600 number-flex"><span class="number-text">(1)</span>노란색을 지정하고 연필(1)의 처음 그릴 위치 (–150, 80)를 지정한다.</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(2)</span>연필(1) 위치로 이동해서 편지봉투를 그리고 연필(1)의 ‘x 좌표를 50만큼 바꾸기’를 5번 반복한다.</p>
+                </div>
+
+                <div class="training-img-box">
+                    <img src="./images/MI0-324-04-04/MI0-324-04-04_01.png" alt="연필 오브젝트의 처음 위치를 x: -150, y: 80으로 설정한 후, 편지봉투 함수와 x 좌표를 50만큼 바꾸기를 5번 반복하는 과정이 담겨 있는 엔트리 블록 그림">
+                </div>
+
+                <div class="mt-20">
+                    <p class="text-20-600 number-flex"><span class="number-text">(3)</span>실행하여 확인한다.</p>
+                </div>
+
+                <div class="gray-ling-box mt-40">
+                    <div class="gray-title-box">
+                        <div class="icon-round-box-36">
+                            <i class="icon-tip"></i>
+                        </div>
+                        <span class="mini-title">Tip</span>
+                    </div>
+                    <div class="gray-ling-box-content">
+                        <p class="text-20-600">x 좌표의 이동은 변수를 만들어 활용할 수도 있다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
