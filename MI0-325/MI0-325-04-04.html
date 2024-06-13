@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex">(4) 프로그래밍</h1>
+        <h2 class="title-24 indent-01">설계한 알고리즘을 바탕으로 화면을 구성하고 프로그램을 작성한다.</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <div class="flex-a-start">
+                        <span class="box-ex">예</span>
+                        <div>
+                            <p class="text-20-600">모두 무효표가 나오면 재투표를 실시한다.</p>
+                            <p class="text-20-600">
+                                [학생 (2)] 오브젝트의
+                                <img src="./images/MI0-325-04-04/MI0-325-04-04_01.png" alt="‘투표 종료 신호를 받았을 때’라고 적혀 있는 엔트리 블록 그림">
+                                블록 맨 밑에 다음 블록 추가하기
+                            </p>
+                            <div class="training-img-box">
+                                <img src="./images/MI0-325-04-04/MI0-325-04-04_02.png" alt="‘만일 무표효 값 = 투표 인원 값이라면’이라고 적혀 있는 블록 안에 ‘”모든 무표효가 나왔습니다. 투표를 다시 시작하세요.”를 4초 동안 말하기’ 블록이 담겨 있는 그림">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-a-start mt-20">
+                        <span class="box-ex">예</span>
+                        <div>
+                            <p class="text-20-600">모든 후보의 득표수가 동일할 때 재투표를 실시한다.</p>
+                            <p class="text-20-600">
+                                [학생 (2)] 오브젝트의
+                                <img src="./images/MI0-325-04-04/MI0-325-04-04_01.png" alt="‘투표 종료 신호를 받았을 때’라고 적혀 있는 엔트리 블록 그림">
+                                맨 밑에 다음 블록 추가하기
+                            </p>
+                            <div class="training-img-box">
+                                <img src="./images/MI0-325-04-04/MI0-325-04-04_03.png" alt="‘만일 1번 후보 값 = 2번 후보 값 그리고 2번 후보 값 = 3번 후보 값이라면’이라고 적혀 있는 블록 안에 ‘”모든 후보의 득표수가 같습니다. 투표를 다시 시작합니다.”를 4초 동안 말하기’ 블록이 담겨 있는 그림">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

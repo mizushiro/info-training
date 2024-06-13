@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex">(4) 프로그래밍</h1>
+        <h2 class="title-24 indent-01">설계한 알고리즘을 바탕으로 화면을 구성하고 프로그램을 작성한다.</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <p class="text-20-600">
+                        다음 실행 화면을 참고하여 ‘우주 쓰레기 청소’ 프로그램을 완성해 보자.
+                    </p>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-326-04-02/MI0-326-04-02_01.png" alt="우주 배경 위에 초시계, 우주 쓰레기 청소 성공 글상자, 점수가 나타나 있는 결과 화면 그림">
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-326-04-02/MI0-326-04-02_02.png" alt="왼쪽 이동 버튼, 오른쪽 이동 버튼, 소리 센서가 표시되어 있는 센서 보드 사진">
+                    </div>
+
+                    <dl class="line-box-v2 mt-40">
+                        <dt class="line-box-title">오브젝트</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">로켓(3)</p>
+                            <p class="dot-type-20-400">[묶음] 폭발 효과</p>
+                            <p class="dot-type-20-400">쓰레기</p>
+                            <p class="dot-type-20-400">점수(글상자)</p>
+                            <p class="dot-type-20-400">결과 발표(글상자)</p>
+                            <p class="dot-type-20-400">우주(2)(배경)</p>
+                        </dd>
+                        <dt class="line-box-title">신호</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">발사</p>
+                            <p class="dot-type-20-400">종료</p>
+                        </dd>
+                        <dt class="line-box-title">변수</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">점수</p>
+                        </dd>
+                    </dl>
+
+                    <p class="text-24-700 mt-40">
+                        &lt;우주 쓰레기 청소&gt;
+                    </p>
+
+                    <div class="sky-title-box mt-20">
+                        쓰레기 오브젝트 만들기
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-326-04-02/MI0-326-04-02_03.png" alt="쓰레기 오브젝트 그림">
+                            <p class="text-20-600">쓰레기</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-326-04-02/MI0-326-04-02_04.png" alt="시작하기 버튼을 클릭했을 때 쓰레기 오브젝트의 크기는 30 x, y 좌표는 무작위로 설정하며, 복제본을 만드는 과정을 반복하는 엔트리 블록 그림">
+                    </div>
+
+
+                    <div class="sky-title-box mt-40">
+                        점수 설정하기
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-326-04-02/MI0-326-04-02_05.png" alt="쓰레기 오브젝트 그림">
+                            <p class="text-20-600">쓰레기</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-326-04-02/MI0-326-04-02_06.png" alt="쓰레기 복제본이 생성되었을 때, 레이저가 쓰레기 오브젝트에 닿으면 점수 변수가 10 증가하고 쓰레기 오브젝트를 삭제하는 과정을 반복하는 엔트리 블록 그림">
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-326-04-02/MI0-326-04-02_07.png" alt="종료 신호를 받았을 때 쓰레기 오브젝트의 모양을 숨기고 모든 쓰레기 오브젝트 복제본을 삭제하는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        점수 표시하기
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-326-04-02/MI0-326-04-02_08.png" alt="점수 오브젝트 그림">
+                            <p class="text-20-600">점수</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-326-04-02/MI0-326-04-02_09.png" alt="시작하기 버튼을 클릭했을 때 현재 획득한 점수를 안내하는 과정을 반복하는 엔트리 블록 그림">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        결과 발표 글상자 숨기기
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-326-04-02/MI0-326-04-02_10.png" alt="결과 발표 오브젝트 그림">
+                            <p class="text-20-600">결과 발표</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-326-04-02/MI0-326-04-02_11.png" alt="시작하기 버튼을 클릭했을 때 결과 발표 글상자를 숨기는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        결과 발표하기
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-326-04-02/MI0-326-04-02_12.png" alt="결과 발표 오브젝트 그림">
+                            <p class="text-20-600">결과 발표</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-326-04-02/MI0-326-04-02_13.png" alt="종료 신호를 받았을 때 점수가 300점 이상이면 “우주 쓰레기 청소 성공!”이라고 안내하고 그렇지 않다면 “조금 더 우주 쓰레기를 청소해 주세요!”라고 안내하는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

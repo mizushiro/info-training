@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex">(4) 프로그래밍</h1>
+        <h2 class="title-24 indent-01">설계한 알고리즘을 바탕으로 화면을 구성하고 프로그램을 작성한다.</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <p class="text-20-600">
+                        다음 실행 화면을 참고하여 ‘투표 준비’ 프로그램을 완성해 보자.
+                    </p>
+
+                    <p class="text-20-800 mt-40">
+                        <i class="icon-play"></i>실행화면
+                    </p>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-325-04-01/MI0-325-04-01_01.png" alt="교실을 배경으로 칠판에는 후보 리스트와 투표수라는 글자가 제시되어 있고, 학생 오브젝트가 “투표 인원을 입력해 주세요.”라고 말하고 있으며, 화면 아래에 입력 창이 나타나 있는 투표 준비 화면 그림">
+                    </div>
+                    <p class="text-20-600 mt-12 number-flex">
+                        <span class="number-text">※</span>후보가 세 명일 때를 가정하고 프로그램을 작성한다.
+                    </p>
+
+                    <dl class="line-box-v2 mt-40">
+                        <dt class="line-box-title">오브젝트</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">학생(2)</p>
+                            <p class="dot-type-20-400">교실(배경)</p>
+                            <p class="dot-type-20-400">투표수(글상자)</p>
+                            <p class="dot-type-20-400">다시하기 버튼</p>
+                        </dd>
+                        <dt class="line-box-title">신호</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">투표 시작</p>
+                            <p class="dot-type-20-400">투표 종료</p>
+                        </dd>
+                        <dt class="line-box-title">변수</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">학급 인원</p>
+                            <p class="dot-type-20-400">투표 인원</p>
+                            <p class="dot-type-20-400">무효표</p>
+                            <p class="dot-type-20-400">1번 후보</p>
+                            <p class="dot-type-20-400">2번 후보</p>
+                            <p class="dot-type-20-400">3번 후보</p>
+                        </dd>
+                        <dt class="line-box-title">함수</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">최다 득표자 동점</p>
+                        </dd>
+                        <dt class="line-box-title">리스트</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">후보</p>
+                        </dd>
+                    </dl>
+
+                    <p class="text-24-700 mt-40">
+                        &lt;투표 준비&gt;
+                    </p>
+
+                    <div class="sky-title-box mt-20">
+                        ‘후보‘ 리스트 만들기
+                    </div>
+                    <div class="mt-20">
+                        <p class="text-20-600 number-flex"><span class="number-text">(1)</span>‘후보’ 리스트를 만든다.</p>
+                        <p class="text-20-600 number-flex"><span class="number-text">(2)</span>선거 후보를 ‘후보‘ 리스트에 입력한다.</p>
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        ‘학급 인원’ 입력하기
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-325-04-01/MI0-325-04-01_02.png" alt="학생 오브젝트 그림">
+                            <p class="text-20-600">학생(2)</p>
+                        </div>
+                    </div>
+
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-325-04-01/MI0-325-04-01_03.png" alt="투표 인원을 입력받아 학급 인원 변수에 저장하고 “번호순으로 나와서 원하는 후보의 번호를 눌러 주세요.”를 4초 동안 말한 다음 투표 시작 신호를 보내는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
