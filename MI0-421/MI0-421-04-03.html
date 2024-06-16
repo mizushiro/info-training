@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex"><span class="number-text">(2)</span> 인공지능 분류 모델: 손 모양 인식하기</h1>
+        <h2 class="title-24 indent-01">가위, 바위, 보 세 가지 모양을 분류하여 인식하는 인공지능 모델을 만들고 결과를 확인해 보자.</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <div class="sky-title-box">
+                        모델 학습
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래의 내용을 바탕으로 모델을 학습시킨다.</p>
+
+                    <table class="training-table-basic mt-20">
+                        <caption class="sr-only">모델의 종류, 학습 모델 이름, 클래스 이름, 수집 데이터, 수집 방법을 정리한 표</caption>
+                        <colgroup>
+                            <col style="width:13.6rem">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody data-align="left">
+                        <tr>
+                            <th scope="row">모델의 종류</th>
+                            <td>분류: 이미지</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">학습 모델 이름</th>
+                            <td>손 모양 분류 인공지능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">클래스 이름</th>
+                            <td>가위, 바위, 보</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수집 데이터</th>
+                            <td>가위, 바위, 보 세 가지 손 모양의 이미지</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수집 방법</th>
+                            <td>손의 모양을 직접 촬영하거나 인터넷에서 이미지 수집</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="line-box mt-40">
+                        <p class="round-box">
+                            확인하기
+                        </p>
+                        <p class="text-20-600 number-flex"><span class="number-text">1.</span>입력한 데이터는 학습에 적합한 이미지인가?</p>
+                        <p class="text-20-600 number-flex"><span class="number-text">2.</span>훈련 데이터의 양은 충분한가?</p>
+                        <p class="text-20-600 number-flex"><span class="number-text">3.</span>손 모양은 잘 인식하는가?</p>
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        프로그래밍
+                    </div>
+                    <p class="dot-type-20-400 mt-20">학습된 모델을 활용하여 분류 결과를 말하도록 프로그래밍한다.</p>
+
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-421-04-03/MI0-421-04-03_01.png" alt="엔트리봇 오브젝트 그림">
+                            <p class="text-20-600">엔트리봇</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-421-04-03/MI0-421-04-03_02.png" alt="시작하기 버튼을 클릭하면 학습한 모델로 분류하고 분류 결과를 말하는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        결과 확인
+                    </div>
+                    <p class="dot-type-20-400 mt-20">이미지 파일을 업로드하거나 손 모양을 촬영하고 실행 결과를 확인한다.</p>
+
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-421-04-03/MI0-421-04-03_03.png" alt="파일을 업로드하거나 촬영을 할 수 있는 데이터 입력 화면 사진">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

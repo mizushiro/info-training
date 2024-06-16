@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex"><span class="number-text">(4)</span>텍스트 분류 모델: 감정 인식하기</h1>
+        <h2 class="title-24 indent-01">텍스트를 인식하여 기쁨과 슬픔으로 분류하는 인공지능 모델을 만들어 보자.</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <div class="sky-title-box">
+                        모델 학습
+                    </div>
+
+                    <p class="dot-type-20-400 mt-20">아래의 내용을 바탕으로 모델을 학습시킨다.</p>
+
+                    <table class="training-table-basic mt-20">
+                        <caption class="sr-only">모델의 종류, 학습 모델 이름, 클래스 이름, 수집 데이터, 수집 방법을 정리한 표</caption>
+                        <colgroup>
+                            <col style="width:13.6rem">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody data-align="left">
+                        <tr>
+                            <th scope="row">모델의 종류</th>
+                            <td>분류: 텍스트</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">학습 모델 이름</th>
+                            <td>감정 인식 인공지능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">클래스 이름</th>
+                            <td>기쁨, 슬픔</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수집 데이터</th>
+                            <td>기쁨과 슬픔을 표현하는 텍스트 데이터</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수집 방법</th>
+                            <td>기쁨과 슬픔을 표현하는 텍스트를 직접 입력하기</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="line-box mt-40">
+                        <p class="round-box">
+                            확인하기
+                        </p>
+                        <p class="text-20-600 number-flex"><span class="number-text">1.</span>입력한 데이터는 해당 감정의 특성을 잘 나타내는 문자인가?</p>
+                        <p class="text-20-600 number-flex"><span class="number-text">2.</span>훈련 데이터의 양은 충분한가?</p>
+                        <p class="text-20-600 number-flex"><span class="number-text">3.</span>기분을 입력하였을 때 감정을 잘 분류하는가?</p>
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        프로그래밍
+                    </div>
+                    <p class="dot-type-20-400 mt-20">학습한 모델을 활용하여 ‘기쁨’, ‘슬픔’에 적절한 말을 출력하고 그에 맞는 얼굴 모양으로 바꿀 수 있게 프로그래밍한다.</p>
+
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-421-04-06/MI0-421-04-06_01.png" alt="얼굴 스티커 오브젝트 그림">
+                            <p class="text-20-600">(묶음)얼굴 스티커</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-421-04-06/MI0-421-04-06_02.png" alt="시작하기 버튼을 클릭했을 때 기본 얼굴 스티커 모양으로 바꾸고, 감정을 묻고 대답을 기다린 후, 대답을 학습한 모델로 분류하여 분류 결과에 따라 표정을 바꾸는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        결과 확인
+                    </div>
+                    <p class="dot-type-20-400 mt-20">텍스트를 입력하고 실행 결과를 확인한다.</p>
+
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-421-04-06/MI0-421-04-06_03.png" alt="시작하기 버튼을 눌렀을 때의 실행 화면 그림">
+                            <p class="text-20-600">시작하기 눌렀을 때</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <div class="flex-col">
+                            <img src="./images/MI0-421-04-06/MI0-421-04-06_04.png" alt="분류 결과에 따라 바뀐 표정을 제시하고 있는 실행 화면 그림">
+                            <p class="text-20-600">분류 결과</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

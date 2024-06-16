@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-24">컴퓨터와 가위바위보 대결하기</h2>
+        <h3 class="text-20-600">앞에서 만든 ‘손 모양 분류 인공지능’ 모델을 이용해 컴퓨터와 가위바위보 대결을 하는 프로그램을 작성해 보자.</h3>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+
+                <p class="text-20-800">
+                    <i class="icon-play"></i>실행화면
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-421-04-04/MI0-421-04-04_01.png" alt="꽃밭 배경 위에 가위바위보 변수, 얼굴 오브젝트, 게임 결과 글상자, 가위바위보 오브젝트가 각각 나타나 있는 그림">
+                </div>
+
+                <dl class="line-box-v2 mt-40">
+                    <dt class="line-box-title">오브젝트</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">가위바위보</p>
+                        <p class="dot-type-20-400">얼굴</p>
+                        <p class="dot-type-20-400">게임 결과(글상자)</p>
+                        <p class="dot-type-20-400">꽃밭(3)</p>
+                    </dd>
+                    <dt class="line-box-title">변수</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">가위바위보</p>
+                    </dd>
+                    <dt class="line-box-title">신호</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">모양 보이기</p>
+                    </dd>
+                </dl>
+
+
+                <p class="dot-type-20-400 mt-40">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                <div class="training-img-box relative mt-100">
+                    <div class="flex-col">
+                        <div class="bubble-box" data-position="bottom">
+                            카메라로 촬영하여 인공지능 모델로<br>
+                            분류하고 그 결과를 말한다.
+                        </div>
+                        <img src="./images/MI0-421-04-04/MI0-421-04-04_02.png" alt="얼굴 오브젝트 그림">
+                        <p class="text-20-600">얼굴(사람)</p>
+                    </div>
+                </div>
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-421-04-04/MI0-421-04-04_03.png" alt="시작하기 버튼을 클릭하면 학습한 모델로 분류하고 분류 결과를 말한 후 모양 보이기 신호를 보내는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+                <div class="training-img-box relative mt-140">
+                    <div class="flex-col">
+                        <div class="bubble-box left" data-position="bottom">
+                            <p class="dot-type-20-400">손 모양을 무작위로 저장한다.</p>
+                            <p class="dot-type-20-400">변숫값에 따라 손 모양이 바뀌게 한다.</p>
+                        </div>
+                        <img src="./images/MI0-421-04-04/MI0-421-04-04_04.png" alt="가위바위보 오브젝트 그림">
+                        <p class="text-20-600">가위바위보(컴퓨터)</p>
+                    </div>
+                </div>
+
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-421-04-04/MI0-421-04-04_05.png" alt="시작하기 버튼을 클릭하면 모양을 숨기는 과정이 담긴 엔트리 블록 그림">
+                </div>
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-421-04-04/MI0-421-04-04_06.png" alt="모양 보이기 신호를 받았을 때 모양을 보인 후 가위바위보 변숫값을 1부터 3 사이의 무작위 수로 정하여, 1일 때는 가위, 2일 때는 바위, 3일 때는 보 모양으로 각각 바꾸는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+                <p class="dot-type-20-400 mt-40">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                <div class="training-img-box relative mt-100">
+                    <div class="flex-col">
+                        <div class="bubble-box left" data-position="bottom">
+                            클릭하면 승패가 보이도록 한다.
+                        </div>
+                        <img src="./images/MI0-421-04-04/MI0-421-04-04_07.png" alt="게임 결과 글상자 오브젝트 그림">
+                        <p class="text-20-600">게임 결과</p>
+                    </div>
+                </div>
+                <div class="training-img-box mt-20">
+                    <img src="./images/MI0-421-04-04/MI0-421-04-04_08.png" alt="게임 결과 글상자 오브젝트를 클릭하면 카메라로 촬영한 이미지의 분류 결과와 가위바위보 변숫값을 비교하여 이기면 '이겼다', 비기면 '비겼다', 지면 ‘졌다’라고 말하는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

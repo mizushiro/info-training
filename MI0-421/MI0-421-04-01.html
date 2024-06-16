@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box number-flex">(1) 인공지능 모델 만들기</h1>
+        <h2 class="title-24 indent-01">개와 고양이 이미지 데이터를 이용해 인공지능 모델을 만들어 보자.</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <p class="text-20-600">
+                        다음 실행 화면을 참고하여 ‘우주 로켓 제어’ 프로그램을 완성해 보자.
+                    </p>
+
+                    <div class="sky-title-box mt-20">
+                        데이터 입력: 모델 이름과 클래스별 데이터 입력
+                    </div>
+
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-421-04-01/MI0-421-04-01_01.png" alt="엔트리의 이미지 모델 학습하기 중 모델 이름과 클래스별 데이터를 입력하는 항목의 사진">
+                    </div>
+                    <div class="mt-20">
+                        <p class="text-20-600 number-flex"><span class="number-text">(1)</span>모델 이름 입력하기: 만들고자 하는 모델의 이름을 입력한다.</p>
+                        <p class="text-20-600 number-flex"><span class="number-text">(2)</span>데이터 입력하기: 모델 학습에 필요한 데이터를 수집하여 클래스별로 분류하여 입력한다. 데이터는 미리 저장된 파일을 업로드하거나 카메라로 바로 촬영해 입력할 수 있다. 클래스별로 충분히 학습할 수 있도록 최소한 5개 이상의 데이터를 입력한다.</p>
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        학습: 학습하여 모델 만들기
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-421-04-01/MI0-421-04-01_02.png" alt="엔트리의 이미지 모델 학습하기 중 학습 항목의 사진">
+                    </div>
+                    <div class="mt-20">
+                        <p class="text-20-600 number-flex"><span class="number-text">(3)</span>모델 학습하기: 클래스별로 입력한 데이터로 인공지능 시스템을 학습시켜 분류할 수 있는 모델을 만든다.</p>
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        결과 확인: 모델 성능 검증하기
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-421-04-01/MI0-421-04-01_03.png" alt="엔트리의 이미지 모델 학습하기 중 결과 항목의 사진">
+                    </div>
+                    <div class="mt-20">
+                        <p class="text-20-600 number-flex"><span class="number-text">(4)</span>결과 확인하기: 학습된 모델이 정확하게 분류하는지 결과를 확인하고 평가한다. 이때 학습에 사용된 데이터를 사용하지 않고 새로운 데이터를 입력해야 한다. 학습된 모델은 새로운 데이터가 무엇인지 확률값으로 보여 준다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
