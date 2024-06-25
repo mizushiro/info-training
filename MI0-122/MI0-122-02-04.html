@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-30">빛 센서와 LED를 이용하여 자동으로 불이 켜지는 전등을 만들어 보자!</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <div class="line-box">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-01"></i>
+                        </span>
+                        조건
+                    </p>
+                    <p class="dot-type-20-400">빛 센서(아날로그 1)를 선택한다.</p>
+                    <p class="dot-type-20-400">시작 버튼을 누르면 현재 측정되는 빛 센서의 값을 말한다.</p>
+                    <p class="dot-type-20-400">빛 센서의 값이 150을 초과하면 전등이 켜지고, 아닌 경우에는 전등이 꺼지도록 한다.</p>
+                </div>
+
+                <div class="sky-title-box mt-40">
+                    실행 화면 및 오브젝트
+                </div>
+
+                <div class="training-img-box">
+                    <img src="./images/MI0-122-02-04/MI0-122-02-04_01.png" alt="전등 오브젝트와 빛 감지 센서의 값을 말하고 있는 학생 오브젝트가 나타나 있는 실행 화면 그림">
+                </div>
+
+                <div class="sky-title-box mt-40">
+                    학생 프로그램 코드
+                </div>
+                <p class="dot-type-20-400 mt-20">
+                    아래 블록을 참고하여 프로그램을 작성해 보자.
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-122-02-04/MI0-122-02-04_02.png" alt="시작하기 버튼을 클릭했을 때 빛 감지 센서값을 계속 반복하여 말하는 엔트리 블록 그림">
+                </div>
+
+                <div class="sky-title-box mt-40">
+                    전등 프로그램 코드
+                </div>
+                <p class="dot-type-20-400 mt-20">
+                    아래 블록을 참고하여 프로그램을 작성해 보자.
+                </p>
+
+                <div class="training-img-box">
+                    <img src="./images/MI0-122-02-04/MI0-122-02-04_03.png" alt="시작하기 버튼을 클릭했을 때 빛 감지 센서값이 150보다 낮아지면 전등이 켜진 모양으로 바뀌고 그렇지 않으면 전등이 꺼진 모양으로 바뀌는 과정을 반복하는 엔트리 블록 그림">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

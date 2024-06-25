@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">맞춤 학습</h1>
+        <h2 class="title-30">데이터의 저장과 사용</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700">
+                    다음 조건을 참고하여 프로그램을 작성해 보자.
+                </p>
+
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-01"></i>
+                        </span>
+                        조건
+                    </p>
+                    <p class="text-20-600 number-flex">
+                        <span class="number-text">(1)</span>‘숫자형’ 리스트를 만들고 1부터 20까지의 숫자 중 무작위로 10개의 숫자를 저장한다.
+                    </p>
+                    <p class="text-20-600 number-flex">
+                        <span class="number-text">(2)</span>키보드로 숫자를 입력받고, 입력받은 숫자가 ‘숫자형’ 리스트에 있으면 ‘리스트에 있습니다.’를, 아니면 ‘리스트에 없습니다.'를 출력한다.
+                    </p>
+                </div>
+
+                <p class="dot-type-20-400 mt-20">
+                    아래 블록을 참고하여 프로그램을 작성해 보자.
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-321-03-07/MI0-321-03-07_01.png" alt="1부터 20까지의 숫자 중 무작위로 10개의 숫자를 ‘숫자형‘ 리스트에 추가하고, 키보드로 숫자를 입력받아, 입력받은 숫자가 리스트에 있으면 ‘리스트에 있습니다.’를, 아니면 ‘리스트에 없습니다.'를 말하는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

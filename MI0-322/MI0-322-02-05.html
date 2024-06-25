@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">선택 활동</h1>
+        <h2 class="title-30">사칙 연산 프로그램 만들기</h2>
+        <h3 class="text-20-600">두 수를 입력하면 사칙 연산을 해 주는 프로그램을 작성해 보자.  </h3>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700">
+                    다음 실행 화면을 참고하여 사칙 연산 프로그램을 완성해 보자.
+                </p>
+
+                <p class="text-20-800 mt-40">
+                    <i class="icon-play"></i>실행화면
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-322-02-02/MI0-322-02-02_01.png" alt="상단에 첫 번째 수, 두 번째 수 변수와 대답이 나타나 있고, 그 아래에 엔트리봇, 더하기, 빼기, 곱하기, 나누기 오브젝트가 나타나 있는 실행 화면 그림">
+                </div>
+
+                <dl class="line-box-v2 mt-40">
+                    <dt class="line-box-title">오브젝트</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">엔트리봇</p>
+                        <p class="dot-type-20-400">더하기</p>
+                        <p class="dot-type-20-400">빼기</p>
+                        <p class="dot-type-20-400">곱하기</p>
+                        <p class="dot-type-20-400">나누기</p>
+                    </dd>
+                    <dt class="line-box-title">변수</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">첫 번째 수</p>
+                        <p class="dot-type-20-400">두 번째 수</p>
+                    </dd>
+                </dl>
+
+                <div class="sky-title-box mt-40">
+                    [나누기] 오브젝트를 클릭했을 때
+                </div>
+
+                <div class="training-img-box">
+                    <div class="flex-col">
+                        <img src="./images/MI0-322-02-05/MI0-322-02-05_02.png" alt="나누기 오브젝트 그림">
+                        <p class="text-20-600">나누기</p>
+                    </div>
+                </div>
+
+                <div class="mt-20">
+                    <p class="text-20-600 number-flex">
+                        <span class="number-text">(1)</span>오브젝트를 클릭하면 “나눈 결과는”이라고 2초 동안 말한다.
+                    </p>
+                    <p class="text-20-600 number-flex">
+                        <span class="number-text">(2)</span>＂‘첫 번째 수 값 / 두 번째 수 값’입니다.”라고 말한다.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

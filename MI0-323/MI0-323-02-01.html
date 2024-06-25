@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">선택 활동</h1>
+        <h2 class="title-30">순차 구조와 반복 구조를 활용한 사각형 그리기</h2>
+        <h3 class="text-20-600">사각형을 그리는 프로그램을 순차 구조와 반복 구조로 작성하고, 그 차이를 생각해 보자.</h3>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700">
+                    다음 알고리즘과 실행 화면을 참고하여 사각형을 그려 보자.
+                </p>
+
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-02"></i>
+                        </span>
+                        알고리즘
+                    </p>
+                    <p class="text-20-800">순차 구조 </p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(1)</span>100만큼 이동하기</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(2)</span>90도 돌기</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(3)</span>100만큼 이동하기</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(4)</span>90도 돌기</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(5)</span>100만큼 이동하기</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(6)</span>90도 돌기</p>
+                    <p class="text-20-600 number-flex"><span class="number-text">(7)</span>100만큼 이동하기</p>
+                </div>
+
+                <p class="text-20-800 mt-40">
+                    <i class="icon-play"></i>실행화면
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-323-02-01/MI0-323-02-01_01.png" alt="연필 오브젝트가 사각형을 그리고 있는 실행 화면">
+                </div>
+
+                <p class="dot-type-20-400 mt-40">
+                    아래 블록을 참고하여 프로그램을 작성해 보자.
+                </p>
+
+                <div class="training-img-box">
+                    <img src="./images/MI0-323-02-01/MI0-323-02-01_02.png" alt="시작하기 버튼을 클릭하면 그리기를 시작하고 100만큼 이동한 후 90도 회전하고, 100만큼 이동한 후 90도 회전하고, 100만큼 이동한 후 90도 회전하고, 100만큼 이동하는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

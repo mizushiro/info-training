@@ -45,6 +45,7 @@ a, button{color:blue}
 .icon-play {aspect-ratio:1/1;width:2rem;background:url("../images/icon-play.svg") no-repeat 50% 50%;background-size:contain;display:inline-block;}
 .primary-color {color:var(--training-primary);}
 strong.primary-color {font-weight:800;}
+.font-normal {font-family:'sans-serif'}
 
 .training-base {display:flex;flex-direction:column;height:100%;}
 .training-head {padding:2.4rem 2.4rem 1.6rem;flex-shrink:0;}
@@ -163,4 +164,4 @@ strong.primary-color {font-weight:800;}
 .depth-01 {padding-left:3rem;}
 .flex-group {display:flex;gap:2rem;justify-content:center;align-items:flex-start;}
 .flex-group .flex-col {width:calc(50% - 1rem)}
-.box-ex {height:2.8rem;width:2.8rem;background-color:#232426;border-radius:.8rem;display:flex;align-items:center;justify-content:center;line-height:1;flex-shrink:0;color:#fff;font-size:1.6rem;margin-right:.4rem;}
+.box-ex {height:2.8rem;width:2.8rem;background-color:#7B7B7B;border-radius:.8rem;display:flex;align-items:center;justify-content:center;line-height:1;flex-shrink:0;color:#fff;font-size:1.6rem;margin-right:.4rem;}
