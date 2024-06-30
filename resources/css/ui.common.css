@@ -165,3 +165,4 @@ strong.primary-color {font-weight:800;}
 .flex-group {display:flex;gap:2rem;justify-content:center;align-items:flex-start;}
 .flex-group .flex-col {width:calc(50% - 1rem)}
 .box-ex {height:2.8rem;width:2.8rem;background-color:#7B7B7B;border-radius:.8rem;display:flex;align-items:center;justify-content:center;line-height:1;flex-shrink:0;color:#fff;font-size:1.6rem;margin-right:.4rem;}
+.max-w-55 {max-width:55%;}
