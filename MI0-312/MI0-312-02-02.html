@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 Level up</h1>
+        <h2 class="title-30">프로그래밍으로 알고리즘의 효율성 살펴보기</h2>
+        <h3 class="text-20-600">1부터 100까지 더하는 알고리즘의 효율성을 프로그래밍으로 비교해 볼 수 있다.</h3>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <p class="text-24-700 v2">
+                    <span class="round-box">
+                        알고리즘
+                        <span class="icon-round-box-20 v2">1</span>
+                    </span>을 활용하여 1부터 100까지 순서대로 더할 때의 실행 시간을 확인해 보자.
+                </p>
+
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        알고리즘
+                        <span class="icon-round-box-20 v2">1</span>
+                    </p>
+                    <p class="text-20-800">1부터 순서대로 더하기</p>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-312-02-02/MI0-312-02-02_01.png" alt="1부터 100까지 순서대로 더하는 과정을 나타낸 알고리즘 1 그림">
+                    </div>
+                </div>
+                <p class="dot-type-20-400 mt-40">
+                    아래 블록을 참고하여 프로그램을 작성하고 결과를 확인해 보자.
+                </p>
+
+                <div class="training-img-box">
+                    <img src="./images/MI0-312-02-02/MI0-312-02-02_02.png" alt="시작하기 버튼을 클릭하면 초시계를 시작한 후, 더하는 수에 1만큼 더하고 합을 합 값에 더하는 수 값을 더한 값으로 정하는 과정을 100번 반복한 다음, 초시계를 정지하는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
