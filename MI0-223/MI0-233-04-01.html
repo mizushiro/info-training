@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">(5) 데이터 활용</h1>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <h2 class="text-20-600 indent-01">데이터 분석 결과를 활용하여 학급 친구들에게 자신의 키에 맞는 체력이 어느 정도인지 확인할 수 있도록 데이터를 공유하고, 이를 바탕으로 각자가 체력이 부족한 부위를 단련하는 운동 계획을 세울 수 있게 안내하자.</h2>
+                <p class="text-20-800 number-flex mt-20">
+                    <span class="number-text">1.</span> 엔트리에서 [데이터 분석] – [테이블 불러오기]를 선택하여 스프레드시트 파일을 가져온다.
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-223-04-01/MI0-223-04-01_01.png" alt="엔트리에서 데이터 분석 – 테이블 불러오기를 선택하여 여학생 데이터.xlsx와 남학생 데이터.xlsx를 가져오는 화면 사진">
+                </div>
+
+                <p class="text-20-800 number-flex mt-40">
+                    <span class="number-text">2.</span> 차트 탭에서 신장에 따른 체력 측정 결과를 볼 수 있는 차트를 ‘악력‘, ‘윗몸 말아 올리기‘, ‘제자리벌리뛰기’, 이름으로 각각 생성한다.
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-223-04-01/MI0-223-04-01_02.png" alt="차트 탭에서 차트 이름을 여학생 데이터.xlsx_차트_악력_좌로 입력하고 가로축에는 신장을, 계열은 악력, 좌로 선택한 화면 사진">
+                </div>
+
+                <p class="text-20-800 number-flex mt-40">
+                    <span class="number-text">3.</span> 실행 화면과 오브젝트를 참고하여 프로그램을 작성한다.
+                </p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-223-04-01/MI0-223-04-01_03.png" alt="운동장 배경 위에 대답 결과가 제시되어 있고, 코치 오브젝트가 “남학생의 차트 창을 열어드리겠습니다. 차트의 제목을 눌러 종목별로 살펴보세요.”라고 말하고 있는 실행 화면 그림">
+                </div>
+
+                <dl class="line-box-v2 mt-40">
+                    <dt class="line-box-title">오브젝트</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">코치(1)</p>
+                        <p class="dot-type-20-400">운동장</p>
+                    </dd>
+                    <dt class="line-box-title">변수</dt>
+                    <dd class="line-box-content">
+                        <p class="dot-type-20-400">성별</p>
+                    </dd>
+                </dl>
+
+
+                <p class="dot-type-20-400 mt-40">
+                    아래 블록을 참고하여 프로그램을 작성해 보자.
+                </p>
+                <div class="training-img-box max-w-55">
+                    <div class="flex-col">
+                        <img src="./images/MI0-223-04-01/MI0-223-04-01_04.png" alt="코치 오브젝트 그림">
+                        <p class="text-20-600">코치(1)</p>
+                    </div>
+                </div>
+
+                <div class="training-img-box mt-40">
+                    <img src="./images/MI0-223-04-01/MI0-223-04-01_05.png" alt="성별을 묻고, 그 대답에 따라서 해당 성별의 신장 능력에 따른 각 운동 능력을 확인할 수 있는 테이블을 열어 보는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
