@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-24">클린봇, 악성 댓글을 막아 줘!</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <h3 class="text-20-600">댓글을 입력하면 선한 댓글인지, 악성 댓글인지 알려주는 인공지능 모델을 만들어 보자.</h3>
+
+                    <div class="line-box mt-40">
+                        <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-01"></i>
+                        </span>
+                            조건
+                        </p>
+                        <p class="dot-type-20-400">
+                            텍스트 분류 결과가 ‘선한 댓글’이면, 소피의 모양을 ‘소피_신남’으로 바꾼다.
+                        </p>
+                        <p class="dot-type-20-400">
+                            텍스트 분류 결과가 ‘악성 댓글’이면, 소피의 모양을 ‘소피_시무룩’으로 바꾼다.
+                        </p>
+                        <p class="dot-type-20-400">
+                            각 텍스트 데이터는 20개 이상 입력한다.
+                        </p>
+                    </div>
+
+                    <table class="training-table-basic mt-40">
+                        <caption class="sr-only">모델의 종류, 학습 모델 이름, 클래스 이름, 수집 데이터, 수집 방법을 정리한 표</caption>
+                        <colgroup>
+                            <col style="width:14rem">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">모델의 종류</th>
+                            <td class="a-left">분류: 텍스트</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">학습 모델 이름</th>
+                            <td class="a-left">댓글 분류 모델</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">클래스 이름</th>
+                            <td class="a-left">선한 댓글, 악성 댓글</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수집 데이터</th>
+                            <td class="a-left">댓글 텍스트 데이터</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수집 방법</th>
+                            <td class="a-left">직접 입력하기</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-20-800 mt-40">
+                        <i class="icon-play"></i>실행 화면
+                    </p>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-422-02-02/MI0-422-02-02_01.png" alt="클린봇이 악성 댓글을 차단하였다는 내용이 담긴 실행 화면 그림">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        학습 모델 예시
+                    </div>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-422-02-02/MI0-422-02-02_02.png" alt="학습할 데이터로 선한 댓글 클래스와 악성 댓글 클래스를 생성한 화면">
+                    </div>
+                    <div class="bubble-box mt-20" data-position="relative">
+                        클래스 별로 적절한 데이터를 수집해 입력한다.
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        오브젝트
+                    </div>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-422-02-02/MI0-422-02-02_03.png" alt="[묶음] 얼굴 스티커와 나의 공책 오브젝트가 제시된 화면">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        프로그램 코드
+                    </div>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-422-02-02/MI0-422-02-02_04.png" alt="댓글 내용을 대답으로 정한 후 대답을 학습한 모델로 분류하고, 선한 댓글이라면 반짝반짝 얼굴 스티커로 모양을 바꾸며 “고마워!”라고 말하고, 그렇지 않다면 슬픈 얼굴 스티커로 모양을 바꾸며 “그런 말을 들으면 슬퍼.”라고 말하는 엔트리 블록 그림">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

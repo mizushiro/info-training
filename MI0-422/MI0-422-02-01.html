@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-24">이건 무슨 소리일까?</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <h3 class="text-20-600">소리를 들려주면 사람 목소리인지, 물건 소리인지 알려 주는 인공지능 모델을 만들어 보자.</h3>
+
+                    <div class="line-box mt-40">
+                        <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-01"></i>
+                        </span>
+                            조건
+                        </p>
+                        <p class="dot-type-20-400">
+                            몇 %의 확률로 어떤 소리인지 알려 주고, 확률이 70% 이하이면 잘 모르겠다고 안내한다.
+                        </p>
+                        <p class="dot-type-20-400">
+                            각 소리 데이터의 입력 시간은 1초로 설정한다.
+                        </p>
+                        <p class="dot-type-20-400">
+                            각 소리 데이터는 20개 이상 입력한다.
+                        </p>
+                    </div>
+
+                    <table class="training-table-basic mt-40">
+                        <caption class="sr-only">모델의 종류, 학습 모델 이름, 클래스 이름, 수집 데이터, 수집 방법을 정리한 표</caption>
+                        <colgroup>
+                            <col style="width:14rem">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">모델의 종류</th>
+                            <td class="a-left">분류: 소리</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">학습 모델 이름</th>
+                            <td class="a-left">소리 분류 인공지능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">클래스 이름</th>
+                            <td class="a-left">사람 목소리, 물건 소리</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수집 데이터</th>
+                            <td class="a-left">사람 목소리, 물건 소리 데이터</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수집 방법</th>
+                            <td class="a-left">직접 녹음하기</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-20-800 mt-40">
+                        <i class="icon-play"></i>실행 화면
+                    </p>
+                    <div class="training-img-box line-type">
+                        <img src="./images/MI0-422-02-01/MI0-422-02-01_01.png" alt="'만능 로봇 오브젝트가 “사람 목소리인지 물건의 소리인지 알아맞혀 볼게요. 소리를 입력해 주세요.”라고 말하고 있는 실행 화면 그림">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        학습 모델 예시
+                    </div>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-422-02-01/MI0-422-02-01_02.png" alt="학습 모델로 사람 목소리, 물건 소리 클래스를 생성한 예시 화면">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        오브젝트
+                    </div>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-422-02-01/MI0-422-02-01_03.png" alt="만능 로봇과 사무실 안 오브젝트가 제시된 화면">
+                    </div>
+
+                    <div class="sky-title-box mt-40">
+                        프로그램
+                    </div>
+                    <div class="training-img-box">
+                        <img src="./images/MI0-422-02-01/MI0-422-02-01_04.png" alt="소리를 분류하여 사람 목소리에 대한 신뢰도가 높으면 확률과 함께 사람 목소리임을 말하고, 물건 소리에 대한 신뢰도가 높으면 확률과 함께 물건 소리임을 말하며, 그 외에는 잘 모르겠다고 말하는 엔트리 블록 그림">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
