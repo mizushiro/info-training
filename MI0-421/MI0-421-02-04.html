@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 다지기 활동</h1>
+        <h2 class="title-24">어떤 병원으로 가야 할까?</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <h3 class="text-20-600">증상을 입력하면 어떤 병원으로 가야 하는지 알려 주는 인공지능 모델을 만들어 보자.</h3>
+
+                <div class="line-box mt-40">
+                    <p class="round-box">
+                        <span class="icon-round-box-20">
+                            <i class="icon-01"></i>
+                        </span>
+                        조건
+                    </p>
+                    <p class="dot-type-20-400">
+                        증상을 입력하면 가야 할 병원을 알려 준다고 안내한다.
+                    </p>
+                    <p class="dot-type-20-400">
+                        증상을 입력하면 어떤 병원에 가야 할지 말풍선과 음성으로 알려 준다.
+                    </p>
+                </div>
+
+                <table class="training-table-basic mt-40">
+                    <caption class="sr-only">모델의 종류, 학습 모델 이름, 클래스 이름, 수집 데이터, 수집 방법을 정리한 표</caption>
+                    <colgroup>
+                        <col style="width:14rem">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">모델의 종류</th>
+                        <td class="a-left">분류: 텍스트</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">학습 모델 이름</th>
+                        <td class="a-left">병원 분류 인공지능</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">클래스 이름</th>
+                        <td class="a-left">내과, 치과, 이비인후과, 안과</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">수집 데이터</th>
+                        <td class="a-left">각 병원과 관련된 증상</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">수집 방법</th>
+                        <td class="a-left">인터넷에서 증상 텍스트 수집하기</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="text-20-800 mt-40">
+                    <i class="icon-play"></i>실행 화면
+                </p>
+                <div class="training-img-box line-type">
+                    <img src="./images/MI0-421-02-04/MI0-421-02-04_01.png" alt="안경 쓴 학생 오브젝트가 ‘내과로 가 봐.’ 라고 말하고 있는 그림">
+                </div>
+
+                <div class="sky-title-box mt-40">
+                    학습 모델 예시
+                </div>
+                <div class="training-img-box">
+                    <img src="./images/MI0-421-02-04/MI0-421-02-04_02.png" alt="학습할 데이터에 ‘내과’라는 클래스를 만들고 ‘복통, 구토, 설사, 변비, 장염, 배가 아파, 토를 했어, 설사를 했어, 변비 증상이야, 옆구리가 아파, 소화가 잘 안돼, 속이 쓰려‘ 등의 데이터를 입력한 화면">
+                </div>
+
+                <div class="sky-title-box mt-40">
+                    오브젝트
+                </div>
+                <div class="training-img-box">
+                    <img src="./images/MI0-421-02-04/MI0-421-02-04_03.png" alt="안경 쓴 학생과 학교 복도가 나타나 있는 오브젝트 화면">
+                </div>
+
+                <div class="sky-title-box mt-40">
+                    프로그램
+                </div>
+                <div class="training-img-box">
+                    <img src="./images/MI0-421-02-04/MI0-421-02-04_04.png" alt="시작하기 버튼을 클릭하면 증상을 입력받고, 대답을 학습한 모델로 분류하여 모델에 적합한 병원으로 안내하는 과정을 반복하는 엔트리 블록 그림">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>

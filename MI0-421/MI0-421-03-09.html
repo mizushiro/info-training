@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">맞춤 학습</h1>
+        <h2 class="title-24">인공지능 시스템의 적용</h2>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide p-scroll">
+                <h3 class="text-20-600">다음을 참고하여 텍스트 분류 모델을 만들어 보자.</h3>
+
+                <table class="training-table-basic mt-20">
+                    <caption class="sr-only">모델의 종류, 학습 모델 이름, 클래스 이름, 수집 데이터의 예시를 정리한 표</caption>
+                    <colgroup>
+                        <col style="width:14rem">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">모델의 종류</th>
+                        <td class="a-left">분류: 텍스트</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">학습 모델 이름</th>
+                        <td class="a-left">배고픔과 배부름 구분</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">클래스 이름</th>
+                        <td class="a-left">배고픔, 배부름</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">수집 데이터<br>(예시)</th>
+                        <td class="a-left">
+                            배고픔: 배고파, 허기져, 당 떨어진다, 뭔가 먹고 싶어, 꼬르륵 소리가 났어, 엄청 허기져. 뭔가 땡겨, 뱃가죽이 등에 붙겠어<br>
+                            배부름: 배불러, 불러, 꽉 찼어. 그만 먹을래, 숨도 못 쉬겠어, 배가 터질 것 같아, 너무 많이 먹었어, 빵빵해
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="text-20-800 mt-40">
+                    <i class="icon-play"></i>실행 화면
+                </p>
+                <div class="training-img-box line-type">
+                    <img src="./images/MI0-421-03-09/MI0-421-03-09_01.png" alt="엔트리가 ‘지금 너는 배부름’이라고 말하고 있고 그 옆에는 ‘배가 불러’라는 대답이 제시되어 있는 실행 화면 그림">
+                </div>
+
+                <div class="sky-title-box mt-40">
+                    프로그램
+                </div>
+                <p class="dot-type-20-400 mt-20">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                <div class="training-img-box">
+                    <img src="./images/MI0-421-03-09/MI0-421-03-09_02.png" alt="시작하기 버튼을 클릭했을 때 “지금 배가 고프니? 아니면 배가 부르니?”라고 묻고 대답을 학습한 모델로 분류한 후, ‘지금 너는’과 분류 결과를 합친 값을 말하는 과정이 담긴 엔트리 블록 그림">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
