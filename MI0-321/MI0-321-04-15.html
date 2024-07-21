@@ -24,78 +24,246 @@
     <main class="training-content">
         <div class="swiper-content-area">
             <div class="swiper-wrapper">
-            <div class="swiper-slide p-scroll">
-                <h2 class="title-24">끝말잇기 게임 만들기</h2>
-                <h3 class="text-20-600 mt-12">친구들과 끝말잇기 게임 프로그램을 작성해 보자.</h3>
-                <p class="text-24-700 number-flex mt-20">
-                    <span class="number-text">1.</span> 다음 실행 화면을 참고하여 끝말잇기 게임 프로그램을 완성해 보자.
-                </p>
-                <p class="text-20-800 mt-80">
-                    <i class="icon-play"></i>실행 화면
-                </p>
-                <div class="training-img-box">
-                    <div class="relative">
-                        <img src="./images/MI0-321-04-15/MI0-321-04-15_01.png" alt="끝말잇기 게임이라는 제목 아래 얼굴(남), [묶음]꽃과 턱 괸 모습 오브젝트가 녹색 배경 위에 제시되어 있고, 단어, 대답, 끝말 잇기 리스트가 나타나 있는 프로그램의 실행 화면 그림">
-                        <div class="bubble-box right" data-position="bottom">
-                            끝말잇기<br>
-                            단어를 저장하는<br>
-                            리스트
+                <div class="swiper-slide p-scroll">
+                    <h2 class="title-24">끝말잇기 게임 만들기</h2>
+                    <h3 class="text-20-600 mt-12">친구들과 끝말잇기 게임 프로그램을 작성해 보자.</h3>
+                    <p class="text-24-700 number-flex mt-20">
+                        <span class="number-text">1.</span> 다음 실행 화면을 참고하여 끝말잇기 게임 프로그램을 완성해 보자.
+                    </p>
+                    <p class="text-20-800 mt-80">
+                        <i class="icon-play"></i>실행 화면
+                    </p>
+                    <div class="training-img-box">
+                        <div class="relative">
+                            <img src="./images/MI0-321-04-15/MI0-321-04-15_01.png" alt="끝말잇기 게임이라는 제목 아래 얼굴(남), [묶음]꽃과 턱 괸 모습 오브젝트가 녹색 배경 위에 제시되어 있고, 단어, 대답, 끝말 잇기 리스트가 나타나 있는 프로그램의 실행 화면 그림">
+                            <div class="bubble-box right" data-position="bottom">
+                                끝말잇기<br>
+                                단어를 저장하는<br>
+                                리스트
+                            </div>
+                        </div>
+                    </div>
+
+                    <dl class="line-box-v2 mt-40">
+                        <dt class="line-box-title">오브젝트</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">얼굴(남)</p>
+                            <p class="dot-type-20-400">[묶음]꽃과 턱 괸 모습</p>
+                            <p class="dot-type-20-400">끝말잇기 게임(글상자)</p>
+                            <p class="dot-type-20-400">단색 배경(녹색 배경_1)</p>
+                        </dd>
+                        <dt class="line-box-title">변수</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">단어(초깃값: 엔트리)</p>
+                        </dd>
+                        <dt class="line-box-title">리스트</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">끝말잇기</p>
+                        </dd>
+                        <dt class="line-box-title">신호</dt>
+                        <dd class="line-box-content">
+                            <p class="dot-type-20-400">시작</p>
+                            <p class="dot-type-20-400">엔트리 말해</p>
+                            <p class="dot-type-20-400">친구 말해</p>
+                            <p class="dot-type-20-400">엔트리 승</p>
+                            <p class="dot-type-20-400">친구 승</p>
+                        </dd>
+                    </dl>
+
+                    <div class="sky-title-box mt-40">
+                        [꽃과 턱 괸 모습] 시작하기 버튼을 클릭했을 때
+                    </div>
+                    <p class="dot-type-20-400 mt-12">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20 max-w-55">
+                        <div class="flex-col">
+                            <img src="./images/MI0-321-04-15/MI0-321-04-15_02.png" alt="꽃과 턱 괸 모습 오브젝트 그림">
+                            <p class="text-20-600">꽃과 턱 괸 모습</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-321-04-15/MI0-321-04-15_03.png" alt="시작하기 버튼을 클릭했을 때 게임을 안내하면서 단어를 끝말잇기 리스트에 추가하고 '친구 말해' 신호를 보내는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                    <div class="bubble-box mt-20" data-position="relative">
+                        <div class="help-info">
+                            <i class="icon-05"></i>
+                            <p class="help-info-desc">화면의 크기를 좌우로 조절하면 블록을 크게 볼 수 있어요.</p>
+                        </div>
+                    </div>
+                    <div class="gray-ling-box mt-40">
+                        <div class="gray-title-box">
+                            <div class="icon-round-box-36">
+                                <i class="icon-tip"></i>
+                            </div>
+                            <span class="mini-title">Tip</span>
+                        </div>
+                        <div class="gray-ling-box-content">
+                            <p class="text-20-600">신호 보내기와 신호 받기를 활용하면 프로그램의 실행 순서를 제어할 수 있다.</p>
                         </div>
                     </div>
                 </div>
-
-                <dl class="line-box-v2 mt-40">
-                    <dt class="line-box-title">오브젝트</dt>
-                    <dd class="line-box-content">
-                        <p class="dot-type-20-400">얼굴(남)</p>
-                        <p class="dot-type-20-400">[묶음]꽃과 턱 괸 모습</p>
-                        <p class="dot-type-20-400">끝말잇기 게임(글상자)</p>
-                        <p class="dot-type-20-400">단색 배경(녹색 배경_1)</p>
-                    </dd>
-                    <dt class="line-box-title">변수</dt>
-                    <dd class="line-box-content">
-                        <p class="dot-type-20-400">단어(초깃값: 엔트리)</p>
-                    </dd>
-                    <dt class="line-box-title">리스트</dt>
-                    <dd class="line-box-content">
-                        <p class="dot-type-20-400">끝말잇기</p>
-                    </dd>
-                    <dt class="line-box-title">신호</dt>
-                    <dd class="line-box-content">
-                        <p class="dot-type-20-400">시작</p>
-                        <p class="dot-type-20-400">엔트리 말해</p>
-                        <p class="dot-type-20-400">친구 말해</p>
-                        <p class="dot-type-20-400">엔트리 승</p>
-                        <p class="dot-type-20-400">친구 승</p>
-                    </dd>
-                </dl>
-
-                <div class="sky-title-box mt-40">
-                    [꽃과 턱 괸 모습] 시작하기 버튼을 클릭했을 때
-                </div>
-                <p class="dot-type-20-400 mt-12">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
-                <div class="training-img-box mt-20 max-w-55">
-                    <div class="flex-col">
-                        <img src="./images/MI0-321-04-15/MI0-321-04-15_02.png" alt="꽃과 턱 괸 모습 오브젝트 그림">
-                        <p class="text-20-600">꽃과 턱 괸 모습</p>
+                <div class="swiper-slide p-scroll">
+                    <div class="sky-title-box">
+                        [얼굴(남)] 시작하기 버튼을 클릭했을 때
                     </div>
-                </div>
-                <div class="training-img-box mt-40">
-                    <img src="./images/MI0-321-04-15/MI0-321-04-15_03.png" alt="시작하기 버튼을 클릭했을 때 게임을 안내하면서 단어를 끝말잇기 리스트에 추가하고 '친구 말해' 신호를 보내는 과정이 담긴 엔트리 블록 그림">
-                </div>
-                <div class="gray-ling-box mt-40">
-                    <div class="gray-title-box">
-                        <div class="icon-round-box-36">
-                            <i class="icon-tip"></i>
+                    <p class="dot-type-20-400 mt-12">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20 max-w-55">
+                        <div class="flex-col">
+                            <img src="./images/MI0-321-04-16/MI0-321-04-16_02.png" alt="얼굴(남) 오브젝트 그림">
+                            <p class="text-20-600">얼굴(남)</p>
                         </div>
-                        <span class="mini-title">Tip</span>
                     </div>
-                    <div class="gray-ling-box-content">
-                        <p class="text-20-600">신호 보내기와 신호 받기를 활용하면 프로그램의 실행 순서를 제어할 수 있다.</p>
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-321-04-16/MI0-321-04-16_03.png" alt="시작하기 버튼을 클릭했을 때 2초 기다린 후 “좋아요!!”라고 2초 동안 말하는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                    <div class="bubble-box mt-20" data-position="relative">
+                        <div class="help-info">
+                            <i class="icon-05"></i>
+                            <p class="help-info-desc">화면의 크기를 좌우로 조절하면 블록을 크게 볼 수 있어요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide p-scroll">
+                    <div class="sky-title-box">
+                        [얼굴(남)] ‘친구 말해’ 신호를 받았을 때]
+                    </div>
+                    <p class="dot-type-20-400 mt-12">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20 max-w-55">
+                        <div class="flex-col">
+                            <img src="./images/MI0-321-04-16/MI0-321-04-16_02.png" alt="얼굴(남) 오브젝트 그림">
+                            <p class="text-20-600">얼굴(남)</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-321-04-17/MI0-321-04-17_02.png" alt="'친구 말해‘ 신호를 받았을 때 단어의 마지막 글자가 대답의 첫 글자와 같으면 끝말잇기 리스트에 대답을 추가한 후 ‘엔트리 말해’ 신호를 보내고, 그렇지 않다면 '엔트리 승’ 신호를 보내는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                    <div class="bubble-box mt-20" data-position="relative">
+                        <div class="help-info">
+                            <i class="icon-05"></i>
+                            <p class="help-info-desc">화면의 크기를 좌우로 조절하면 블록을 크게 볼 수 있어요.</p>
+                        </div>
+                    </div>
+                    <div class="gray-ling-box mt-40">
+                        <div class="gray-title-box">
+                            <div class="icon-round-box-36">
+                                <i class="icon-tip"></i>
+                            </div>
+                            <span class="mini-title">Tip</span>
+                        </div>
+                        <div class="gray-ling-box-content">
+                            <p class="text-20-600">신호 보내기와 신호 받기를 활용하면 프로그램의 실행 순서를 제어할 수 있다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide p-scroll">
+                    <div class="sky-title-box">
+                        [꽃과 턱 괸 모습] ‘엔트리 말해’ 신호를 받았을 때
+                    </div>
+                    <p class="dot-type-20-400 mt-12">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20 max-w-55">
+                        <div class="flex-col">
+                            <img src="./images/MI0-321-04-18/MI0-321-04-18_02.png" alt="꽃과 턱 괸 모습 오브젝트 그림">
+                            <p class="text-20-600">꽃과 턱 괸 모습</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-321-04-18/MI0-321-04-18_03.png" alt="'엔트리 말해’ 신호를 받았을 때 단어의 마지막 글자와 대답의 첫 글자가 같으면 끝말잇기 리스트에 대답을 추가한 후 ‘친구 말해‘ 신호를 보내고, 그렇지 않으면 '친구 승’ 신호를 보내는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                    <div class="bubble-box mt-20" data-position="relative">
+                        <div class="help-info">
+                            <i class="icon-05"></i>
+                            <p class="help-info-desc">화면의 크기를 좌우로 조절하면 블록을 크게 볼 수 있어요.</p>
+                        </div>
+                    </div>
+                    <div class="gray-ling-box mt-40">
+                        <div class="gray-title-box">
+                            <div class="icon-round-box-36">
+                                <i class="icon-tip"></i>
+                            </div>
+                            <span class="mini-title">Tip</span>
+                        </div>
+                        <div class="gray-ling-box-content">
+                            <p class="text-20-600">신호 보내기와 신호 받기를 활용하면 프로그램의 실행 순서를 제어할 수 있다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide p-scroll">
+                    <div class="sky-title-box">
+                        [꽃과 턱 괸 모습] ‘엔트리 승‘ 신호를 받았을 때
+                    </div>
+                    <p class="dot-type-20-400 mt-12">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20 max-w-55">
+                        <div class="flex-col">
+                            <img src="./images/MI0-321-04-19/MI0-321-04-19_02.png" alt="꽃과 턱 괸 모습 오브젝트 그림">
+                            <p class="text-20-600">꽃과 턱 괸 모습</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-321-04-19/MI0-321-04-19_03.png" alt="‘엔트리 승' 신호를 받았을 때 “끝 글자로 시작해야 해요.”라고 2초 동안 말한 후 “제가 이겼어요.”라고 말하는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                    <div class="bubble-box mt-20" data-position="relative">
+                        <div class="help-info">
+                            <i class="icon-05"></i>
+                            <p class="help-info-desc">화면의 크기를 좌우로 조절하면 블록을 크게 볼 수 있어요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide p-scroll">
+                    <div class="sky-title-box">
+                        [얼굴(남)] ‘친구 승’ 신호를 받았을 때
+                    </div>
+                    <p class="dot-type-20-400 mt-12">아래 블록을 참고하여 프로그램을 작성해 보자.</p>
+                    <div class="training-img-box mt-20 max-w-55">
+                        <div class="flex-col">
+                            <img src="./images/MI0-321-04-20/MI0-321-04-20_02.png" alt="얼굴(남) 오브젝트 그림">
+                            <p class="text-20-600">얼굴(남)</p>
+                        </div>
+                    </div>
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-321-04-20/MI0-321-04-20_03.png" alt="'친구 승’ 신호를 받았을 때 “끝 글자로 시작해야 해요.”라고 2초 동안 말한 후 “제가 이겼어요.”라고 말하는 과정이 담긴 엔트리 블록 그림">
+                    </div>
+                    <div class="bubble-box mt-20" data-position="relative">
+                        <div class="help-info">
+                            <i class="icon-05"></i>
+                            <p class="help-info-desc">화면의 크기를 좌우로 조절하면 블록을 크게 볼 수 있어요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide p-scroll">
+                    <div class="ability-box">
+                        역량
+                        <span class="icon-round-box-24">
+                            <i class="icon-plus"></i>
+                        </span>
+                    </div>
+                    <p class="text-24-700 number-flex">
+                        <span class="number-text">2.</span> ‘시작‘ 신호를 받았을 때, 한 번 사용한 단어는 다시 사용하지 않도록 다음을 참고하여 프로그램을 수정해 보자.
+                    </p>
+
+                    <div class="training-img-box mt-40 max-w-55">
+                        <div class="flex-col">
+                            <img src="./images/MI0-321-04-21/MI0-321-04-21_01.png" alt="얼굴(남) 오브젝트 그림">
+                            <p class="text-20-600">얼굴(남)</p>
+                        </div>
+                    </div>
+                    <p class="dot-type-20-400 mt-20">대답이 ‘끝말잇기’ 리스트에 있는 단어인지 확인한다.</p>
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-321-04-21/MI0-321-04-21_02.png" alt="만일 ‘끝말잇기에 대답이 포함되었는가?’라면, 아니면이라고 적혀 있는 엔트리 블록 그림">
+                    </div>
+                    <p class="dot-type-20-400 mt-20">‘이미 사용한 단어입니다.’, ‘내가 이겼어.’를 말한다.</p>
+                    <div class="training-img-box mt-40">
+                        <img src="./images/MI0-321-04-21/MI0-321-04-21_03.png" alt="‘이미 사용한 단어입니다.’를 1초 동안 말하기라고 적혀 있는 엔트리 블록 그림">
+                    </div>
+                    <div class="training-img-box mt-20">
+                        <img src="./images/MI0-321-04-21/MI0-321-04-21_04.png" alt="'내가 이겼어.'를 말하기라고 적혀 있는 엔트리 블록 그림">
+                    </div>
+                    <div class="bubble-box mt-20" data-position="relative">
+                        <div class="help-info">
+                            <i class="icon-05"></i>
+                            <p class="help-info-desc">화면의 크기를 좌우로 조절하면 블록을 크게 볼 수 있어요.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="swiper-nav-group">
             <div class="swiper-button-prev">이전</div>
