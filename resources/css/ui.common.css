@@ -24,6 +24,7 @@ article, aside, details, figcaption, figure, footer, header, main, hgroup, nav, 
 textarea {resize:none}
 a, button{color:blue}
 * {box-sizing:border-box}
+img {pointer-events:none}
 
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{font-family:'SUIT', 'Malgun Gothic', AppleGothicNeoSD, 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic', 'Droid sans', Dotum, 돋움, 굴림, arial, sans-serif;font-size:13px;}
 :root {
