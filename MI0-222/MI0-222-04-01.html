@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>실습</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+    <script src="../resources/js/swiper.min.js"></script>
+
+</head>
+
+<body >
+<div class="training-base">
+    <header class="training-head">
+        <h1 class="title-box">역량 굳히기 활동</h1>
+    </header>
+    <main class="training-content">
+        <div class="swiper-content-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-scroll">
+                    <h2 class="title-30">데이터를 기반으로 의견 주장하기</h2>
+                    <h3 class="text-20-600 mt-20">‘학교알리미’ 사이트에서 우리 학교의 ‘학교 도서관 현황’ 데이터를 찾아보고 이를 근거로 나의 의견을 주장해 보자.</h3>
+
+                    <p class="text-20-600 number-flex mt-40">
+                        <span class="number-text-round">1</span>
+                        <span>
+                            학교 도서관 현황 데이터를 스프레드시트로 정리해 보자.
+                        </span>
+                    </p>
+                    <div class="depth-01">
+                        <div class="training-img-box">
+                            <img src="./images/MI0-222-04-01/MI0-222-04-01_01.png" alt="구분, 1인당 장서 수, 1인당 대출 자료 수에 따라 학교 도서관 현황 데이터를 정리해 보는 스프레드시트 화면 사진">
+                        </div>
+                    </div>
+                    <p class="text-20-600 number-flex mt-40">
+                        <span class="number-text-round">2</span>
+                        <span>
+                            스프레드시트의 기능을 사용해서
+                            <span class="number-text-round">1</span>의 데이터를 막대그래프로 시각화해 보자.
+                        </span>
+                    </p>
+                    <div class="depth-01 relative">
+                        <span class="box-ex">예</span>
+                        <div class="training-img-box">
+                            <img src="./images/MI0-222-04-01/MI0-222-04-01_02.png" alt="학교 도서관 현황을 막대그래프로 나타낸 예시 그림">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-nav-group">
+            <div class="swiper-button-prev">이전</div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">다음</div>
+        </div>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        var swiper = new Swiper('.swiper-content-area', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:0,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+            autoplay: false,
+            on:{
+                slideChange:(v)=> {
+                    console.log(v)
+                    document.querySelector('.swiper-content-area').scrollTo({
+                        top:0
+                    })
+                }
+            }
+        });
+    };
+</script>
+</html>
