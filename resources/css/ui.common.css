@@ -49,6 +49,7 @@ img {pointer-events:none}
 strong.primary-color {font-weight:800;}
 .font-normal {font-family:'sans-serif'}
 .font-800 {font-weight:800;}
+.font-400 {font-weight:400;}
 
 .training-base {display:flex;flex-direction:column;height:100%;}
 .training-head {padding:2.4rem 2.4rem 1.6rem;flex-shrink:0;}
